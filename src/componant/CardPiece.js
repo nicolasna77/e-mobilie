@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -6,11 +7,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import { Carousel } from '@trendyol-js/react-carousel';
+
 import {data} from '../data.js';
 
 
-export default function cardPiece() {
+
+export default function cardPiece(props) {
+
   return (
 
     <Box sx={{ flexGrow: 1 }}>
@@ -22,12 +25,12 @@ export default function cardPiece() {
     </Divider>
 </div>
 
-      <Grid container margin="0 auto" xs={12} sm={12} md={10} spacing={2} >
-<Carousel show={3.5} responsive={true} swiping={true}>
+      <Grid container  xs={12} sm={12} md={10} spacing={2} >
+ 
       { data.map((data, i) => {
                 return (
-
-        <Grid item key={i}>
+             <div key={i}>
+       
         <Card sx={{ minWidth:170, maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
@@ -42,11 +45,13 @@ export default function cardPiece() {
     </Card>
 
       
-      </Grid>
-
+ 
+  
+      </div>   
         )})}
-        </Carousel>
+     
       </Grid>
     </Box>
   );
 }
+

@@ -14,9 +14,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
+import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
-
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -79,9 +78,9 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+  // const handleMobileMenuOpen = (event) => {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // };
 
   const menuId = 'seconde-search-account-menu';
   const renderMenu = (
@@ -104,7 +103,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
-
+  
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -161,10 +160,22 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        {/* icon */}
+        <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+        <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+           
+          >
+            <MenuIcon />
+          </IconButton>
+          </Box>
         <div>
         <img class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} /> 
         </div>
+        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -174,28 +185,28 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+
+          <Box sx={{ display: { xs: 'none', md: 'flex', sm:'flex' } }}>
+            <IconButton size="large" color="inherit">
               <Badge badgeContent={4} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-        
             <Button color="inherit">Login</Button>
-            
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
+
+          <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+          <IconButton size="large"  color="inherit">
+                <SearchIcon/>
             </IconButton>
+          <IconButton size="large"  color="inherit">
+              <Badge badgeContent={4} color="error">
+                <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
+          <Button color="inherit">Login</Button>
           </Box>
         </Toolbar>
       </AppBar>

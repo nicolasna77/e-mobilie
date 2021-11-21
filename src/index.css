@@ -30,7 +30,6 @@ code {
     z-index: 999;
     color: #fff !important;
     position: absolute!important;
-    margin-right: 0 px !important;
     display: none !important;
 }
 
@@ -53,7 +52,7 @@ code {
 }
 
 .divider {
-    height: 5px;
+    height: 4px;
     background-color: #98131d;
     border-radius: 5px;
 }

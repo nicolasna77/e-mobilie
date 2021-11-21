@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
 import Card from '@mui/material/Card';
@@ -8,20 +8,39 @@ import { CardActionArea } from '@mui/material';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
-import { deepOrange, deepPurple } from '@mui/material/colors';
-
+import CardActions from '@mui/material/CardActions';
+import ReactCircleColorPicker from 'react-circle-color-picker'
 import {data} from '../data.js';
+import Favorite  from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Chip from '@mui/material/Chip';
 
+// import handleClick from 'react';
 
-
+class FavoriteButton extends React.Component { 
+    constructor(props) {
+      super(props);
+      this.state = {
+        favoriteIcon: false,
+      }
+    } 
+  
+    render() {
+      return (
+        <IconButton className="buttonFavorite" onClick={()=>this.setState({ favoriteIcon: !this.state.favoriteIcon })}>
+          { this.state.favoriteIcon ? <Favorite color='error'/>: <FavoriteBorderIcon />
+          }
+        
+        </IconButton>
+      );
+    }
+  
+  }
 
 
 export default function CardPop(props) {  
-   
-
+  
     return (
 
         <Box sx={{ flexGrow: 1 }}>
@@ -34,17 +53,16 @@ export default function CardPop(props) {
             </div>
             <Grid container margin="0 auto" xs={12} sm={12} md={10}  spacing={2}>
      
-            { data.map((data) => {
-                return (
-   
-             
-                <Grid item  xs={6} sm={4} md={3}>
+            { data.map((data, i) => {
+                return ( 
+                           
+                <Grid item id={i} xs={6} sm={4} md={3}>
 
                     <Card sx={{ maxWidth: 300 }} className="cardProduct">
                     
-                            <IconButton className="buttonFavorite" >
-                             
-                            </IconButton>
+                            <FavoriteButton />
+                          
+
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -54,22 +72,26 @@ export default function CardPop(props) {
                             />
 
                             <CardContent>
-
+                            <Grid container xs={12}  >
+                            
+                            <Grid item xs={8} >
                             <div>
                                 <Box >
                                     <Rating
                                         value={data.stars}
                                         name="rating"
                                         size="small"
-                                    
                                         readOnly 
                                         precision={0.5}
                                     />
                                 </Box>
                             </div>
+                            </Grid>
 
-                         
-
+                            <Grid item xs={3} float="right" >
+                                <Chip label={data.category} variant="outlined" size="small"/>
+                            </Grid>
+                            </Grid>
                                 <Typography gutterBottom variant="h6" component="div">
                                    {data.title}
                                 </Typography>
@@ -78,20 +100,28 @@ export default function CardPop(props) {
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 </Typography>
 
-                                <Grid container alignItems="center" xs={12} >
+                                <Grid container alignItems="center" xs={12} spacing="3">
 
-                                    <Grid item xs={9} spacing={2}>
-                                        <Stack direction="row" spacing={1}>
-                                            <Avatar sx={{ width: 24, height: 24, bgcolor: deepOrange[500] }}></Avatar>
-                                            <Avatar sx={{ width: 24, height: 24, bgcolor: deepPurple[500] }}></Avatar>
-                                            <Avatar sx={{ width: 24, height: 24, bgcolor: deepOrange[500] }}></Avatar>
-                                        </Stack>
-                                    </Grid>
-                                    <Grid item xs={3}>
+                                    <Grid container xs={12} sm={12} md={12}  >
+                                    
+                                        <CardActions >  
+                                          
+                                        <Grid item xs={2} sm={6} md={8} >
+
+                                      
+                                       
+          
+                                            </Grid>  
+                                           
+                                          </CardActions>
+                                         </Grid>
+                                    
+                               
+                                    <Grid item xs={4} sm={4} md={4} >
                                         <Typography className="priceCardProduct" gutterBottom variant="h5" component="div">
                                             13€
                                         </Typography>
-                                    </Grid>
+                                    </Grid>  
                                 </Grid>
 
                                
