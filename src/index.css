@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'roboto';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+/* style header */
+
+.logoHeader {
+    width: 70px;
+}
+
+.titleCardPiece {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.cardPop {
+    padding: 15px;
+}
+
+.buttonFavorite {
+    z-index: 999;
+    color: #fff !important;
+    position: absolute!important;
+    margin-right: 0 px !important;
+    display: none !important;
+}
+
+.cardProduct {
+    z-index: 9!important;
+}
+
+.cardProduct:hover .buttonFavorite {
+    display: block !important;
+}
+
+.priceCardProduct {
+    margin-right: 0px !important;
+    display: block;
+}
+
+.titleCardPop {
+    padding: 20px;
+}
