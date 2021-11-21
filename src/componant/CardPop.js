@@ -10,11 +10,13 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Rating from '@mui/material/Rating';
 import CardActions from '@mui/material/CardActions';
-import ReactCircleColorPicker from 'react-circle-color-picker'
 import {data} from '../data.js';
 import Favorite  from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Chip from '@mui/material/Chip';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import SortIcon from '@mui/icons-material/Sort';
+
 
 // import handleClick from 'react';
 
@@ -44,13 +46,34 @@ export default function CardPop(props) {
     return (
 
         <Box sx={{ flexGrow: 1 }}>
-            <div className="titleCardPop">
-                <Typography gutterBottom variant="h5" component="div">
-                    Produits populaires
-                </Typography>
-                <Divider className="divider"/>
-               
-            </div>
+             <Grid container margin="0 auto" textAlign="center" xs={12} sm={12} md={11}  >
+
+            <Grid item  xs={6} sm={4} md={2} >
+                <div className="titleCardPop">
+                    <Typography gutterBottom variant="h5" component="div">
+                        Produits populaires
+                    </Typography>
+
+                    <Divider className="divider"/>
+                
+                </div>
+            </Grid>
+            <Grid item  xs={3} sm={6} md={8}  >
+              
+              </Grid>
+            <Grid item  xs={3} sm={2} md={2}  >
+            <IconButton  className="iconFilter" >
+                <SortIcon />
+             </IconButton>
+             <IconButton  className="iconFilter" >
+                <  FilterAltIcon/>
+             </IconButton>
+            </Grid>
+
+            </Grid>
+
+
+
             <Grid container margin="0 auto" xs={12} sm={12} md={10}  spacing={2}>
      
             { data.map((data, i) => {

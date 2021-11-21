@@ -47,12 +47,12 @@ code {
     vertical-align: center;
 }
 
-.titleCardPop {
-    display: inline-block;
-}
-
 .divider {
     height: 4px;
     background-color: #98131d;
     border-radius: 5px;
+}
+
+.iconFilter {
+    float: right;
 }
