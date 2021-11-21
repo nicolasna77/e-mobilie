@@ -6,6 +6,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Divider from '@mui/material/Divider';
+import { Carousel } from '@trendyol-js/react-carousel';
+import {data} from '../data.js';
 
 
 export default function cardPiece() {
@@ -13,17 +15,20 @@ export default function cardPiece() {
 
     <Box sx={{ flexGrow: 1 }}>
         <div className="titleCardPiece">
-        <Typography gutterBottom variant="h5" component="div">
+  <Typography gutterBottom variant="h5" component="div">
     Nos piéces
   </Typography>
-  <Divider  flexItem>
+  <Divider  className="divider">
     </Divider>
 </div>
 
-      <Grid container justifyItems="center" xs={12} sm={8} md={10}  spacing={3}>
-        <Grid item >
-        
-        <Card sx={{ minWidth:250, maxWidth: 380 }}>
+      <Grid container margin="0 auto" xs={12} sm={12} md={10} spacing={2} >
+<Carousel show={3.5} responsive={true} swiping={true}>
+      { data.map((data, i) => {
+                return (
+
+        <Grid item key={i}>
+        <Card sx={{ minWidth:170, maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -36,68 +41,11 @@ export default function cardPiece() {
       </CardActionArea>
     </Card>
 
-        </Grid>
-        <Grid item>
-        
-        <Card sx={{ minWidth:250, maxWidth: 380 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={process.env.PUBLIC_URL + '/SalleDeBain.jpg'}
-          alt="green iguana"
-        />
-  
-      </CardActionArea>
-    </Card>
-
-        </Grid>
-        <Grid item >
-        
-        <Card sx={{ minWidth:250, maxWidth: 380 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={process.env.PUBLIC_URL + '/Salon.jpg'}
-          alt="green iguana"
-        />
       
-      </CardActionArea>
-    </Card>
+      </Grid>
 
-        </Grid>
-
-        <Grid item>
-               
-                <Card sx={{ minWidth:250, maxWidth: 380 }}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                height="140"
-                image={process.env.PUBLIC_URL + '/SalleDeBain.jpg'}
-                alt="green iguana"
-                />
-          
-            </CardActionArea>
-            </Card>
-
-        </Grid>
-        <Grid item >
-        
-        <Card sx={{ minWidth:250, maxWidth: 380 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={process.env.PUBLIC_URL + '/Salon.jpg'}
-          alt="green iguana"
-        />
-    
-      </CardActionArea>
-    </Card>
-
-        </Grid>
+        )})}
+        </Carousel>
       </Grid>
     </Box>
   );

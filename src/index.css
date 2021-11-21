@@ -18,7 +18,7 @@ code {
 
 .titleCardPiece {
     padding: 20px;
-    width: 80%;
+    display: inline-block;
     margin: auto;
 }
 
@@ -45,8 +45,15 @@ code {
 .priceCardProduct {
     margin-right: 0px !important;
     display: block;
+    vertical-align: center;
 }
 
 .titleCardPop {
-    padding: 20px;
+    display: inline-block;
+}
+
+.divider {
+    height: 5px;
+    background-color: #98131d;
+    border-radius: 5px;
 }

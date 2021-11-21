@@ -1,4 +1,4 @@
-import react from "react";
+import * as React from 'react';
 import './App.css';
 import PrimarySearchAppBar from './componant/appBar';
 import CardPiece from './componant/CardPiece';
@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <div>
+     
         <PrimarySearchAppBar></PrimarySearchAppBar>
       </div>
       <div className="cardPiece">
