@@ -54,7 +54,7 @@ code {
 }
 
 .iconFilter {
-    float: right;
+    z-index: 999;
 }
 
 .menuSort {
