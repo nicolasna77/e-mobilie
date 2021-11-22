@@ -16,6 +16,12 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Chip from '@mui/material/Chip';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import SortIcon from '@mui/icons-material/Sort';
+import Grow from '@mui/material/Grow';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 
 // import handleClick from 'react';
@@ -42,7 +48,21 @@ class FavoriteButton extends React.Component {
 
 
 export default function CardPop(props) {  
+    const [open, setOpen] = React.useState(false);
+    const anchorRef = React.useRef(null);
   
+    const handleToggle = () => {
+      setOpen((prevOpen) => !prevOpen);
+    };
+  
+    const handleClose = (event) => {
+      if (anchorRef.current && anchorRef.current.contains(event.target)) {
+        return;
+      }
+  
+      setOpen(false);
+    };
+   
     return (
 
         <Box sx={{ flexGrow: 1 }}>
@@ -62,9 +82,56 @@ export default function CardPop(props) {
               
               </Grid>
             <Grid item  xs={3} sm={2} md={2}  >
-            <IconButton  className="iconFilter" >
-                <SortIcon />
-             </IconButton>
+            <div>
+                    <IconButton   ref={anchorRef}
+          id="composition-button"
+          aria-controls={open ? 'composition-menu' : undefined}
+          aria-expanded={open ? 'true' : undefined}
+          aria-haspopup="true"
+          onClick={handleToggle} className="iconFilter" >
+                       
+                        <SortIcon />
+                    </IconButton>
+                    <Popper
+                        open={open}
+                        anchorEl={anchorRef.current}
+                        role={undefined}
+                        placement="bottom-start"
+                        transition
+                        disablePortal
+                        className="menuSort"
+                                                >
+         
+          {({ TransitionProps, placement }) => (
+         
+          <Grow
+              {...TransitionProps}
+              style={{
+                transformOrigin:
+                  placement === 'bottom-start' ? 'left top' : 'left bottom',
+              }}
+            >
+              <Paper>
+                <ClickAwayListener onClickAway={handleClose}>
+                  <MenuList
+                    autoFocusItem={open}
+                    id="composition-menu"
+                    aria-labelledby="composition-button"
+              
+                  >
+                    <MenuItem onClick={handleClose}>Prix croissants</MenuItem>
+                    <MenuItem onClick={handleClose}>Prix décroissants</MenuItem>
+                    <MenuItem onClick={handleClose}>Notes croissantes</MenuItem>
+                    <MenuItem onClick={handleClose}>Notes décroissantes</MenuItem>
+                  </MenuList>
+                </ClickAwayListener>
+              </Paper>
+            </Grow>
+          )}
+        </Popper>
+                
+      </div>
+
              <IconButton  className="iconFilter" >
                 <  FilterAltIcon/>
              </IconButton>
