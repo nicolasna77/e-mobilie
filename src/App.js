@@ -2,7 +2,6 @@ import * as React from 'react';
 import './App.css';
 import PrimarySearchAppBar from './componant/appBar';
 import CardPiece from './componant/CardPiece';
-import Header from './componant/header'
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import SortIcon from '@mui/icons-material/Sort';
 import Grow from '@mui/material/Grow';
@@ -15,6 +14,8 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
+import CardPop from './componant/CardPop';
+import Footer from './componant/Footer'
 
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
 
               <Grid container xs={6} sm={6} md={8}  >
                   <div className="titleCardPop">
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="h6" component="div">
                           Produits populaires
                       </Typography>
 
@@ -72,13 +73,13 @@ function App() {
                   </div>
                   
               </Grid>
-              <Grid container  xs={3} sm={4} md={2.5}  >
+              <Grid container  xs={3} sm={4} md={2.9}  >
               </Grid>
 
-              <Grid container   xs={3} sm={2} md={1.5}  >
+              <Grid container   xs={3} sm={2} md={1.1}  >
 
 
-                  <Grid item margin="0 auto!important" xs={6} sm={6} md={6} >
+                  <Grid item margin="0 auto!important" >
                       <div>
                           <IconButton 
                               className="iconFilter" 
@@ -131,7 +132,7 @@ function App() {
                   </Grid>
 
 
-                  <Grid item xs={6} sm={6} md={6} >
+                  <Grid item margin="0 auto!important" >
                       <div>
                           <IconButton ref={anchorRef}
                               id="composition-button"
@@ -180,18 +181,16 @@ function App() {
                           </Popper>
 
                       </div>
+                 
                   </Grid>
 
-
               </Grid>
-
           </Grid>
-
-
+          <CardPop></CardPop>
       </div>
 
       <div>
-        <Header></Header>
+        <Footer></Footer>
       </div>
     </div>
 

@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import {data} from '../data.js';
+// import {data} from '../data.js';
 
 
 
@@ -24,13 +24,13 @@ export default function cardPiece(props) {
     </Divider>
 </div>
 
-      <Grid container  xs={12} sm={12} md={10} spacing={2} >
+      <Grid container  xs={12} sm={12} md={12} spacing={2} >
  
-      { data.map((data, i) => {
-                return (
-             <div key={i}>
-       
-        <Card sx={{ minWidth:170, maxWidth: 300 }}>
+      {/* { _.map((_, i) => { */}
+                {/* return ( */}
+          
+             <Grid item  xs={2} sm={4} md={4}  >
+        <Card sx={{ minWidth:200, maxWidth: 300, minHeight:100, maxHeight:200 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -42,12 +42,13 @@ export default function cardPiece(props) {
      
       </CardActionArea>
     </Card>
+    </Grid>
 
       
  
   
-      </div>   
-        )})}
+      
+        {/* )})} */}
      
       </Grid>
     </Box>

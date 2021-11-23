@@ -12,8 +12,13 @@ import CardActions from '@mui/material/CardActions';
 import { data } from '../data.js';
 import Favorite from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import Chip from '@mui/material/Chip';
-import handleClick from 'react';
+import RadioGroup from '@mui/material/RadioGroup';
+import PropTypes from 'prop-types';
+import  { useRadioGroup } from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
 
 class FavoriteButton extends React.Component {
     constructor(props) {
@@ -35,20 +40,45 @@ class FavoriteButton extends React.Component {
 
 }
 
+function MyFormControlLabel(props) {
+    const radioGroup = useRadioGroup();
+  
+    let checked = false;
+  
+    if (radioGroup) {
+      checked = radioGroup.value === props.value;
+    }
+  
+    return <FormControlLabel checked={checked} {...props} />;
+  }
+  
+  MyFormControlLabel.propTypes = {
+    /**
+     * The value of the component.
+     */
+    value: PropTypes.any,
+  };
+
+
+
+
+
 
 export default function CardPop(props) {
+  
+  
 
   return(
 <div>
-            <Box sx={{ maxWidth: [  1100] , margin: "0 auto"}}>
-            <Grid container  margin="0 auto" xs={12} sm={12} md={12} spacing={2}>
+            <Box sx={{ maxWidth: [1100], margin:"0 auto!important", padding:"10px" }}>
+            <Grid container spacing={3}   >
 
                 {data.map((data, i) => {
                     return (
 
-                        <Grid item id={i} xs={6} sm={4} md={3}>
+                        <Grid item xs="6" sm="4" md="3" id={i} >
 
-                            <Card sx={{ maxWidth: 250, }} className="cardProduct">
+                            <Card  className="cardProduct">
 
                                 <FavoriteButton />
 
@@ -64,7 +94,7 @@ export default function CardPop(props) {
                                     <CardContent>
                                         <Grid container xs={12}  >
 
-                                            <Grid item xs={8} >
+                                            <Grid item xs={12} sm={12} >
                                                 <div>
                                                     <Box >
                                                         <Rating
@@ -78,9 +108,7 @@ export default function CardPop(props) {
                                                 </div>
                                             </Grid>
 
-                                            <Grid item xs={3} float="right" >
-                                                <Chip label={data.category} variant="outlined" size="small" />
-                                            </Grid>
+                                           
                                         </Grid>
                                         <Typography gutterBottom variant="h6" component="div">
                                             {data.title}
@@ -90,25 +118,33 @@ export default function CardPop(props) {
                                             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                         </Typography>
 
-                                        <Grid container alignItems="center" xs={12} spacing="3">
+                                        <Grid container alignItems="center" xs={12} md={12} spacing="3">
 
-                                            <Grid container xs={12} sm={12} md={12}  >
+                                            <Grid container xs={9} sm={10} md={9.5}  >
 
                                                 <CardActions >
 
-                                                    <Grid item xs={2} sm={6} md={8} >
+                                                   
+
+                                                    <FormControl  >
+
+                                                    <RadioGroup row aria-label="gender" name="row-radio-buttons-group" defaultValue="a">
+                                                        <div>
+                                                        <FormControlLabel value="a" label="" control={<Radio />} size="small"color="default"/>
+                                                        <FormControlLabel value="b" label="" control={<Radio />} size="small"color="default"/>
+                                                        </div>
+                                                    </RadioGroup>
+                                                    </FormControl>
 
 
-
-
-                                                    </Grid>
+                                           
 
                                                 </CardActions>
                                             </Grid>
 
 
-                                            <Grid item xs={4} sm={4} md={4} >
-                                                <Typography className="priceCardProduct" gutterBottom variant="h5" component="div">
+                                            <Grid item  xs={3} sm={2} md={2.5} >
+                                                <Typography sx={{ float:"right"}} className="priceCardProduct" gutterBottom variant="h6" component="div">
                                                     13€
                                                 </Typography>
                                             </Grid>
