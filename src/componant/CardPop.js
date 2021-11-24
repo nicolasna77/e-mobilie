@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Rating from '@mui/material/Rating';
 import CardActions from '@mui/material/CardActions';
-import { data } from '../data.js';
 import Favorite from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -18,6 +17,7 @@ import  { useRadioGroup } from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Grow from '@mui/material/Grow';
 
 
 class FavoriteButton extends React.Component {
@@ -30,7 +30,7 @@ class FavoriteButton extends React.Component {
 
     render() {
         return (
-            <IconButton className="buttonFavorite" onClick={() => this.setState({ favoriteIcon: !this.state.favoriteIcon })}>
+            <IconButton  className="buttonFavorite" onClick={() => this.setState({ favoriteIcon: !this.state.favoriteIcon })}>
                 {this.state.favoriteIcon ? <Favorite color='error' /> : <FavoriteBorderIcon />
                 }
 
@@ -61,22 +61,30 @@ function MyFormControlLabel(props) {
 
 
 
+  interface Props {
+    image: string;
+    title: string;
+    description: string;
+    stars: Number;
+    price: Number;
+
+  }
 
 
-
-export default function CardPop(props) {
+export default function CardPop({title,image,description, stars, price}: Props) {
   
   
 
   return(
-<div>
-            <Box sx={{ maxWidth: [1100], margin:"0 auto!important", padding:"10px" }}>
-            <Grid container spacing={3}   >
 
-                {data.map((data, i) => {
-                    return (
 
-                        <Grid item xs="6" sm="4" md="3" id={i} >
+                        <Grid item xs="6" sm="4" md="3" >
+                             <Grow
+                            
+   in="true"
+    style={{ transformOrigin: '0 0 0' }}
+     timeout= "1000" 
+  >
 
                             <Card  className="cardProduct">
 
@@ -87,8 +95,8 @@ export default function CardPop(props) {
                                     <CardMedia
                                         component="img"
                                         height="170"
-                                        image={process.env.PUBLIC_URL + '/SalleDeBain.jpg'}
-                                        alt="green iguana"
+                                        src={image}
+                                        alt={`Preview of ${title}`}
                                     />
 
                                     <CardContent>
@@ -98,7 +106,7 @@ export default function CardPop(props) {
                                                 <div>
                                                     <Box >
                                                         <Rating
-                                                            value={data.stars}
+                                                            value={stars}
                                                             name="rating"
                                                             size="small"
                                                             readOnly
@@ -111,21 +119,21 @@ export default function CardPop(props) {
                                            
                                         </Grid>
                                         <Typography gutterBottom variant="h6" component="div">
-                                            {data.title}
+                                            {title}
                                         </Typography>
 
-                                        <Typography variant="body2" color="text.secondary">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        <Typography variant="subtitle2" color="text.secondary">
+                                           {description}
                                         </Typography>
 
                                         <Grid container alignItems="center" xs={12} md={12} spacing="3">
 
-                                            <Grid container xs={9} sm={10} md={9.5}  >
+                                            <Grid container xs={12} sm={12} md={12}  >
 
-                                                <CardActions >
+                                              
 
                                                    
-
+                                            <CardActions>
                                                     <FormControl  >
 
                                                     <RadioGroup row aria-label="gender" name="row-radio-buttons-group" defaultValue="a">
@@ -136,40 +144,27 @@ export default function CardPop(props) {
                                                     </RadioGroup>
                                                     </FormControl>
 
-
+</CardActions>
                                            
 
-                                                </CardActions>
+                                            
                                             </Grid>
 
 
-                                            <Grid item  xs={3} sm={2} md={2.5} >
+                                            <Grid item  xs={12} sm={12} md={12} >
                                                 <Typography sx={{ float:"right"}} className="priceCardProduct" gutterBottom variant="h6" component="div">
-                                                    13€
+                                                    {price} €
                                                 </Typography>
                                             </Grid>
                                         </Grid>
-
-
                                     </CardContent>
-
-
-
-
-
                                 </CardActionArea>
 
                             </Card>
-
+                            </Grow>
                         </Grid>
 
-                    )
-                })}
-
-
-            </Grid>
-            </Box>
-            </div>
+              
   );
 }
 

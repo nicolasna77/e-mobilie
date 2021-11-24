@@ -16,6 +16,9 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import CardPop from './componant/CardPop';
 import Footer from './componant/Footer'
+import { data } from './data.js';
+import Box from '@mui/material/Box';
+import Breadcrumb from './componant/Breadcrumbs';
 
 
 function App() {
@@ -56,12 +59,16 @@ function App() {
         <div>
           <PrimarySearchAppBar></PrimarySearchAppBar>
         </div>
-        <div className="cardPiece">
+       
+            <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 5, md: 5 }}>
+            <Breadcrumb/>
+            </Box> 
+            <div className="cardPiece">
           <CardPiece/>
         </div>
         <div>
    
-          <Grid container  sx={{ maxWidth: [  1200], margin:"0 auto" }}  xs={12} sm={12} md={12}  >
+          <Grid container  sx={{ maxWidth: [  1200], margin:"0 auto", paddingTop:"15px" }}  xs={12} sm={12} md={12}  >
 
               <Grid container xs={6} sm={6} md={8}  >
                   <div className="titleCardPop">
@@ -117,7 +124,7 @@ function App() {
                                                   id="menuFilter"
                                                   aria-labelledby="filter-button"
                                               >
-                                                  <MenuItem onClick={handleCloseFilter}>hrthrhr</MenuItem>
+                                                  <MenuItem onClick={handleCloseFilter} >hrthrhr</MenuItem>
                                                   <MenuItem onClick={handleCloseFilter}>Prix décroissants</MenuItem>
                                                   <MenuItem onClick={handleCloseFilter}>Notes croissantes</MenuItem>
                                                   <MenuItem onClick={handleCloseFilter}>Notes décroissantes</MenuItem>
@@ -186,7 +193,20 @@ function App() {
 
               </Grid>
           </Grid>
-          <CardPop></CardPop>
+          <div>
+            <Box pt={{ xs: 3, md: 3 }} pb={{ xs: 5, md: 10 }} sx={{ maxWidth: [1100], margin:"0 auto!important", padding:"10px" }}>
+            <Grid container spacing={3}   >
+
+                {data.map((data, i) => {
+                    return (
+          <CardPop {...data}/>
+          )
+        })}
+
+
+    </Grid>
+    </Box>
+    </div>
       </div>
 
       <div>

@@ -16,12 +16,6 @@ code {
     width: 70px;
 }
 
-.titleCardPiece {
-    padding: 20px;
-    display: inline-block;
-    margin: auto;
-}
-
 .cardPop {
     padding: 15px;
 }
@@ -60,4 +54,8 @@ code {
 
 .menuSort {
     z-index: 999;
+}
+
+.titleCardPop {
+    padding-left: 10px;
 }

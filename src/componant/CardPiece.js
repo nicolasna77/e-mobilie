@@ -17,11 +17,11 @@ export default function cardPiece(props) {
 
     <Box sx={{ flexGrow: 1 }}>
         <div className="titleCardPiece">
-  <Typography gutterBottom variant="h5" component="div">
+  {/* <Typography gutterBottom variant="h5" component="div">
     Nos piéces
   </Typography>
-  <Divider  className="divider">
-    </Divider>
+  <Divider  className="divider" /> */}
+
 </div>
 
       <Grid container  xs={12} sm={12} md={12} spacing={2} >
@@ -30,7 +30,7 @@ export default function cardPiece(props) {
                 {/* return ( */}
           
              <Grid item  xs={2} sm={4} md={4}  >
-        <Card sx={{ minWidth:200, maxWidth: 300, minHeight:100, maxHeight:200 }}>
+        {/* <Card sx={{ minWidth:200, maxWidth: 300, minHeight:100, maxHeight:200 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -41,7 +41,7 @@ export default function cardPiece(props) {
         />
      
       </CardActionArea>
-    </Card>
+    </Card> */}
     </Grid>
 
       
