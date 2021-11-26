@@ -35,24 +35,24 @@ export default function ListPanier() {
 
     return (
        <Box pt={{ xs: 8, md: 10 }}>
-           <Grid container spacing={3} md={11}>
+           <Grid container spacing={3} md={12}>
           <Grid item xs={12} md={9}>
             <Box  pl={{xs: 5}}>
                 <Typography variant="body1" component="div">Total Articles : 2 Articles</Typography>
             </Box>
 
 
- <Grid container xs="11" md={8} sx={{ p: 2, margin: 'auto', flexGrow: 1 }}>
+ <Grid container xs={12}  md={8} sx={{ p: 2, margin: 'auto', flexGrow: 1 }}>
                    
  <Paper sx={{ p: 2, margin: 'auto', flexGrow: 1 }}>
- <Grid container spacing={2}>
+ <Grid container sm={12} spacing={2}>
         <Grid item >
           <ButtonBase sx={{ width: 128, height: 128 }}>
             <Img alt="complex" src="./salon.jpg" />
           </ButtonBase>
         </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs direction="column" spacing={2}>
+        <Grid item xs sm container>
+          <Grid item xs spacing={2}>
             <Grid item xs>
               <Typography gutterBottom variant="subtitle1" component="div">
                 Standard license
@@ -64,17 +64,21 @@ export default function ListPanier() {
                 ID: 1030114
               </Typography>
             </Grid>
-            <Grid item>
-            <Button color="error" size="small" startIcon={<DeleteIcon />}>
-            Delete
-            </Button>
-            </Grid>
-          </Grid>
-          <Grid item>
+
+            <Grid container>
+                <Grid item>
+
             <Typography variant="subtitle1" component="div">
               $19.00
             </Typography>
+
           </Grid>
+
+            <Grid item>
+            <Button color="error" size="small" startIcon={<DeleteIcon />}/>
+            </Grid>
+          </Grid>
+        </Grid>
         </Grid>
       </Grid>
 
@@ -122,19 +126,22 @@ export default function ListPanier() {
           
 
 
-            <Grid item xs={10} md={3} sx={{ p: 2, margin: 'auto', flexGrow: 1 }}>
-                <Box sx={{ width: '100%', textAlign:'center' }}  >
+            <Grid item xs={10} sm={4} md={3} sx={{  margin: 'auto', }}>
+                <Box sx={{ width: '100%', textAlign:'center' }}>
                     <Paper >
-                        <Box sx={{ width: '100%' }} >
-                            <Box sx={{ width: '100%' }}  >
-                                <Typography variant="h6" component="span"  >Total</Typography>
-                                <Typography variant="h6" component="span"  >9,99€</Typography>
+                        <Box sx={{ width: '100%' }} p={{ xs:'10px' }}   >
+                            <Box sx={{ width: '100%' }} mb="15px"  mt="15px" >
+                                <Typography variant="h6" component="span"  >Total :</Typography>
+                                <Typography variant="h6" component="span"  > 9,99€</Typography>
                             </Box>
 
 
 
                             <Box sx={{ width: '100%' }}  >
                                 <Button variant="contained" > Valider mon panier</Button>
+                            </Box>
+                            <Box sx={{ width: '100%' }} pt="10px" >
+                                <Button  color="info"> Continue mes achat</Button>
                             </Box>
                         </Box>
                     </Paper>
