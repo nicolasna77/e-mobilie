@@ -8,7 +8,12 @@ import Typography from '@mui/material/Typography';
 
 export default function Footer() {
   return (
-    <footer>
+    <Box
+      pt={{ xs: 3, md: 5 }}
+    //  py={{ xs: 5, sm: 12 }}
+      
+    >
+    <footer className="footer" >
     <Box
       pt={{ xs: 3, md: 5 }}
     //  py={{ xs: 5, sm: 12 }}
@@ -98,5 +103,6 @@ export default function Footer() {
       </Container>
     </Box>
   </footer>
+  </Box>
   );
 }

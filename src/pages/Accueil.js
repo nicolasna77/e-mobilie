@@ -18,9 +18,10 @@ import CardPop from './componant/CardPop';
 import Footer from './componant/Footer'
 import { data } from './data.js';
 import Box from '@mui/material/Box';
+import Breadcrumb from './componant/Breadcrumbs';
 
 
-function App() {
+function Accueil() {
 
   const [open, setOpen] = React.useState(false);
   const [openFilter, setOpenFilter] = React.useState(false);
@@ -218,4 +219,4 @@ function App() {
   );
 }
 
-export default App;
+export default Accueil;

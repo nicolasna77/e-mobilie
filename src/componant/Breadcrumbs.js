@@ -2,6 +2,7 @@ import * as React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
+import { Box } from '@mui/system';
 
 function handleClick(event) {
   event.preventDefault();
@@ -10,7 +11,8 @@ function handleClick(event) {
 
 export default function Breadcrumb() {
   return (
-    <div role="presentation" onClick={handleClick}>
+    <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 3, md: 5 }}>
+    <div  onClick={handleClick}>
       <Breadcrumbs aria-label="breadcrumb">
       <Typography
           sx={{ display: 'flex', alignItems: 'center' }}
@@ -21,5 +23,6 @@ export default function Breadcrumb() {
         </Typography>
       </Breadcrumbs>
     </div>
+    </Box>
   );
 }
