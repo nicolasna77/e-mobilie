@@ -156,7 +156,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: { xs: 'none', md: 'flex', sm:'flex' } }}>
-            <IconButton size="large" color="inherit">
+            <IconButton size="large" >
               <Badge badgeContent={4} color="error">
                 <ShoppingCartIcon />
               </Badge>
@@ -165,16 +165,16 @@ export default function PrimarySearchAppBar() {
           </Box>
 
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-          <IconButton size="large"  color="inherit">
+          <IconButton size="large"  color="primary">
                 <SearchIcon/>
             </IconButton>
-            <Link to="/Panier">
-          <IconButton size="large"  color="inherit"  > 
-          <Badge badgeContent={4} color="error">
+            
+          <IconButton size="large"   > 
+          <Badge badgeContent={4} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            </Link>
+        
           <Button color="inherit">Login</Button>
           </Box>
         </Toolbar>

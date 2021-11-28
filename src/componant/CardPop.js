@@ -122,7 +122,7 @@ export default function CardPop({title,image,description, stars, price}: Props) 
                                             {title}
                                         </Typography>
 
-                                        <Typography variant="subtitle2" color="text.secondary">
+                                        <Typography variant="body2" color="text.primary">
                                            {description}
                                         </Typography>
 

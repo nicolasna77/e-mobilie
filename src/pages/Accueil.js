@@ -13,7 +13,6 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import CardPop from '../componant/CardPop';
-import Footer from '../componant/Footer'
 import { data } from '../data.js';
 import Box from '@mui/material/Box';
 
@@ -203,9 +202,7 @@ function Accueil() {
     </div>
       </div>
 
-      <div>
-        <Footer></Footer>
-      </div>
+     
     </div>
 
 

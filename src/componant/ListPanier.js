@@ -35,7 +35,7 @@ export default function ListPanier() {
 
     return (
        <Box pt={{ xs: 8, md: 10 }}>
-           <Grid container spacing={5} md={10} sx={{  margin: 'auto', flexGrow: 1 }}>
+           <Grid container  md={10} sx={{  margin: 'auto', flexGrow: 1 }}>
             
              <Grid item xs={12} md={9}>
               
@@ -44,7 +44,7 @@ export default function ListPanier() {
                 </Box>
     </Grid>
 
- <Grid container xs={8} sm={8}  md={8} sx={{  margin: 'auto', flexGrow: 1 }}>
+ <Grid container xs={10} sm={8}  md={8} sx={{  margin: 'auto', flexGrow: 1 }}>
                    
  <Paper sx={{  margin: 'auto', flexGrow: 1 }}>
  <Grid container sm={12} spacing={2}>
@@ -85,38 +85,6 @@ export default function ListPanier() {
       </Grid>
 
 <Divider />
-<Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src="/static/images/grid/complex.jpg" />
-          </ButtonBase>
-        </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
-                Standard license
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                Full resolution 1920x1080 • JPEG
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                ID: 1030114
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Remove
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1" component="div">
-              $19.00
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
 
 
     </Paper>
@@ -140,10 +108,10 @@ export default function ListPanier() {
 
 
                             <Box sx={{ width: '100%' }}  >
-                                <Button variant="contained" > Valider mon panier</Button>
+                                <Button variant="contained" color="secondary"> Valider mon panier</Button>
                             </Box>
                             <Box sx={{ width: '100%' }} pt="10px" >
-                                <Button  color="info"> Continue mes achat</Button>
+                                <Button  color="secondary" > Continue mes achat</Button>
                             </Box>
                         </Box>
                     </Paper>
