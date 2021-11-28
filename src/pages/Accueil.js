@@ -1,7 +1,5 @@
 import * as React from 'react';
-import './App.css';
-import PrimarySearchAppBar from './componant/appBar';
-import CardPiece from './componant/CardPiece';
+import CardPiece from '../componant/CardPiece';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import SortIcon from '@mui/icons-material/Sort';
 import Grow from '@mui/material/Grow';
@@ -14,11 +12,10 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
-import CardPop from './componant/CardPop';
-import Footer from './componant/Footer'
-import { data } from './data.js';
+import CardPop from '../componant/CardPop';
+import Footer from '../componant/Footer'
+import { data } from '../data.js';
 import Box from '@mui/material/Box';
-import Breadcrumb from './componant/Breadcrumbs';
 
 
 function Accueil() {
@@ -56,9 +53,6 @@ function Accueil() {
 
   return (
 <div>
-        <div>
-          <PrimarySearchAppBar></PrimarySearchAppBar>
-        </div>
        
             <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 5, md: 5 }}>
        

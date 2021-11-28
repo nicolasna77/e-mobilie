@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Panier from './pages/Panier';
 // import { ThemeOptions } from '@mui/material/styles';
 
 
@@ -29,7 +28,7 @@ import Panier from './pages/Panier';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Panier />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

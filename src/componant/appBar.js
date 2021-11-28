@@ -17,6 +17,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -166,10 +168,13 @@ export default function PrimarySearchAppBar() {
           <IconButton size="large"  color="inherit">
                 <SearchIcon/>
             </IconButton>
-          <IconButton size="large"  color="inherit">              <Badge badgeContent={4} color="error">
+            <Link to="/Panier">
+          <IconButton size="large"  color="inherit"  > 
+          <Badge badgeContent={4} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
+            </Link>
           <Button color="inherit">Login</Button>
           </Box>
         </Toolbar>

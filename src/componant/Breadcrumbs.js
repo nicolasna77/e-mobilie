@@ -19,7 +19,7 @@ export default function Breadcrumb() {
           color="text.primary"
         >
            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Accueil
+          Accueil / Panier
         </Typography>
       </Breadcrumbs>
     </div>
