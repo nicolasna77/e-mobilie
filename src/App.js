@@ -4,9 +4,9 @@ import Accueil from './pages/Accueil';
 import Panier from './pages/Panier';
 import Login  from './pages/Login';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Link from "@mui/material/Link";
 import PrimarySearchAppBar  from './componant/appBar';
 import Footer  from './componant/Footer';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Breadcrumb from "./componant/Breadcrumb";
 
 
@@ -34,18 +34,22 @@ const theme = createTheme({
       },
   });
 
+
+
 function App() {
 
   return (
     <ThemeProvider theme={theme}>
+
 <Router>
 <PrimarySearchAppBar/>
+
 <Breadcrumb />
-      
+
          <Routes>
                 <Route exact path="/" element={<Accueil/>} />
                 <Route  path="/Panier" element={<Panier/>} />
-                <Route  path="/Login" element={<Login/>} />
+                <Route  path="/Connection" element={<Login/>} />
                
            </Routes>
     

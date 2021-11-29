@@ -4,23 +4,21 @@ import { Button } from '@mui/material';
 // import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import DeleteIcon from '@mui/icons-material/Delete';
+// import DeleteIcon from '@mui/icons-material/Delete';
 // import MenuItem from '@mui/material/MenuItem';
 // import Select from '@mui/material/Select';
 // import InputLabel from '@mui/material/InputLabel';
 // import FormControl from '@mui/material/FormControl';
-import ButtonBase from '@mui/material/ButtonBase';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { Divider } from '@mui/material'; 
 
 
-const Img = styled('img')({
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-});
+// const Img = styled('img')({
+//     margin: 'auto',
+//     display: 'block',
+//     maxWidth: '100%',
+//     maxHeight: '100%',
+// });
 
 
 

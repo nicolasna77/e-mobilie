@@ -5,19 +5,17 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
+
 // import MailIcon from '@mui/material/Mail'
 // import MailIcon from '@mui/icons-material/mail';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import Container from '@mui/material/Container';
-import { Grid } from '@mui/material';
+import {  Grid } from '@mui/material';
+import {  useNavigate } from 'react-router-dom';
 
 
 
@@ -25,6 +23,7 @@ import { Grid } from '@mui/material';
 
 
 export default function PrimarySearchAppBar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -49,70 +48,10 @@ export default function PrimarySearchAppBar() {
   // };
 
   const menuId = 'seconde-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+
   
   const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem> 
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -131,7 +70,7 @@ export default function PrimarySearchAppBar() {
           </IconButton>
           </Box>
         <div>
-        <img class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} /> 
+        <img onClick={() => navigate('/')} class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} /> 
         </div>
 
    
@@ -140,6 +79,7 @@ export default function PrimarySearchAppBar() {
               <IconButton sx={{ p: '10px' }} aria-label="menu">
                 <MenuIcon />
               </IconButton>
+           
               <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Recherche" inputProps={{ 'aria-label': 'Recherche' }}
               />
               <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
@@ -148,37 +88,36 @@ export default function PrimarySearchAppBar() {
 
             </Paper>
 
-          </Grid>
+  </Grid>
     
      
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: { xs: 'none', md: 'flex', sm:'flex' } }}>
-            <IconButton size="large" >
+            <IconButton onClick={() => navigate('/Panier')} size="large" >
               <Badge badgeContent={4} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            <Button color="inherit">S'identifier</Button>
+            <Button onClick={() => navigate('/Connection')} color="inherit">S'identifier</Button>
           </Box>
 
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-          <IconButton size="large"  color="primary">
+          <IconButton size="large" >
                 <SearchIcon/>
             </IconButton>
             
           <IconButton size="large"  > 
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={4} color="secondary" onClick={() => navigate('/Panier')}>
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
         
-          <Button color="inherit">S'identifier</Button>
+          <Button onClick={() => navigate('/Connection')} color="inherit">S'identifier</Button>
           </Box>
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+    
     </Box>
   );
 }
