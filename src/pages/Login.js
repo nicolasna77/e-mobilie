@@ -1,109 +1,79 @@
-import React from "react";
-import {
-    Button, TextField, Grid, Paper, Typography, Link,} from "@mui/material";
+import React from "react"
+import Avatar from "@mui/material/Avatar"
+import Button from "@mui/material/Button"
+import TextField from "@mui/material/TextField"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import Checkbox from "@mui/material/Checkbox"
+import Link from "@mui/material/Link"
+import Grid from "@mui/material/Grid"
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined"
+import Typography from "@mui/material/Typography"
+import Container from "@mui/material/Container"
+import Tooltip from "@mui/material/Tooltip"
+import { Box } from "@mui/system"
+import Breadcrumb from "../componant/Breadcrumb"
 
-class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { username: "", password: "", authflag: 1 };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(event) {
-        this.setState({ username: event.state.username, password: event.state.password });
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-        if (this.state.username === 'admin@littech.fr' && this.state.password === 'secret') {
-            alert('bien');
-        } else {
-            alert('Incorrect Credntials!');
-        }
-    }
-    render() {
+export default function login() {
+
+   
         return (
-            <div>
-               
-                <Grid container  justify="center" direction="row">
-                    <Grid item>
-                        <Grid
-                            container
-                            direction="column"
-                            justify="center"
-                            spacing={2}
-                            className="login-form"
-                        >
-                            <Paper
-                                variant="elevation"
-                                elevation={2}
-                                className="login-background"
-                            >
-                                <Grid item>
-                                    <Typography component="h1" variant="h5">
-                                        Connection
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <form onSubmit={this.handleSubmit}>
-                                        <Grid container direction="column" spacing={2}>
-                                            <Grid item>
-                                                <TextField
-                                                    type="email"
-                                                    placeholder="Email"
-                                                    fullWidth
-                                                    name="username"
-                                                    variant="outlined"
-                                                    value={this.state.username}
-                                                    onChange={(event) =>
-                                                        this.setState({
-                                                            [event.target.name]: event.target.value,
-                                                        })
-                                                    }
-                                                    required
-                                                    autoFocus
-                                                />
-                                            </Grid>
-                                            <Grid item>
-                                                <TextField
-                                                    type="password"
-                                                    placeholder="Password"
-                                                    fullWidth
-                                                    name="password"
-                                                    variant="outlined"
-                                                    value={this.state.password}
-                                                    onChange={(event) =>
-                                                        this.setState({
-                                                            [event.target.name]: event.target.value,
-                                                        })
-                                                    }
-                                                    required
-                                                />
-                                            </Grid>
-                                            <Grid item>
-                                                <Button
-                                                    variant="contained"
-                                                    color="secondary"
-                                                    type="submit"
-                                                    size="small"
-                                                    className="button-block"
-                                                >
-                                                    Connection
-                                                </Button>
-                                            </Grid>
-                                        </Grid>
-                                    </form>
-                                </Grid>
-                                <Grid item>
-                                    <Link href="#" variant="body2">
-                                        Forgot Password?
-                                    </Link>
-                                </Grid>
-                            </Paper>
-                        </Grid>
-                    </Grid>
+            <Box>
+
+            <Box pt={{ xs: 5, md: 5 }} pb={{ xs: 8, md: 10 }}>
+            <Container component="main" maxWidth="xs">
+            <div >
+                <Avatar >
+                  <LockOutlinedIcon />
+                </Avatar>
+                <Typography variant="h5">S'identifier</Typography>
+              <form >
+                <Grid container spacing={2}>
+                
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="filled"
+                      
+                      fullWidth
+                      id="email"
+                      label="Email"
+                      name="email"
+                      autoComplete="email"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="filled"
+                      fullWidth
+                      label="Mot de passe"
+                      type="password"
+                      name="password"
+                      id="password"
+                      autoComplete="current-password"
+                    />
+                  </Grid>
+                 
                 </Grid>
+                <Box pt={{ xs: 2, md: 2 }} pb={{ xs: 1, md: 1 }}>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="secondary"
+                  >
+                   Connection
+                  </Button>
+                  </Box>
+                <Grid container justify="flex-end">
+                  <Grid item>
+                      <Link href="#" variant="body2">
+                        Mot de passe oublie ?
+                      </Link>
+                  </Grid>
+                </Grid>
+              </form>
             </div>
+          </Container>
+          </Box>
+          </Box>
         );
     }
-}
-export default Login;

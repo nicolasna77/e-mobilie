@@ -34,7 +34,7 @@ function Accueil() {
 
 
   const handleClose = (event) => {
-      if (anchorRef.current && anchorRef.current.contains(event.target)) {
+   if (anchorRef.current && anchorRef.current.contains(event.target)) {
           return;
       }
 
@@ -45,20 +45,18 @@ function Accueil() {
       if (anchorRefFilter.current && anchorRefFilter.current.contains(event.target)) {
           return;
       }
-
+ 
       setOpenFilter(false);
   };
-
+  
 
   return (
 <div>
-       
+        <CardPiece/>
             <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 5, md: 5 }}>
        
             </Box> 
-            <div className="cardPiece">
-          <CardPiece/>
-        </div>
+           
         <div>
    
           <Grid container  sx={{ maxWidth: [  1200], margin:"0 auto", paddingTop:"15px" }}  xs={12} sm={12} md={12}  >
@@ -88,7 +86,7 @@ function Accueil() {
                               aria-controls={openFilter ? 'menuFilter' : undefined}
                               aria-expanded={openFilter ? 'true' : undefined}
                               aria-haspopup="true"
-                              onClick={handleToggleFilter} >
+                              onClick={handleToggle} >
                               <  FilterAltIcon />
                           </IconButton>
 

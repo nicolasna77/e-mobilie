@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
-import {Link} from 'react-router-dom';
+import { Grid } from '@mui/material';
 
 
 
@@ -43,7 +43,7 @@ export default function PrimarySearchAppBar() {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
-
+ 
   // const handleMobileMenuOpen = (event) => {
   //   setMobileMoreAnchorEl(event.currentTarget);
   // };
@@ -116,7 +116,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ flexWrap: 'wrap'}} >
+      <AppBar color="default" position="relative" style={{ flexWrap: 'wrap'}} >
         <Toolbar>
         <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
         <IconButton
@@ -134,11 +134,9 @@ export default function PrimarySearchAppBar() {
         <img class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} /> 
         </div>
 
-        <Box justify="center" sx={{ display: { xs: 'none', sm: 'flex' } }}>
-
- 
-<Container >
-            <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', maxWidth: 400 }} >
+   
+<Grid container justifyContent="center" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+            <Paper component="form" >
               <IconButton sx={{ p: '10px' }} aria-label="menu">
                 <MenuIcon />
               </IconButton>
@@ -149,19 +147,19 @@ export default function PrimarySearchAppBar() {
               </IconButton>
 
             </Paper>
-</Container>
-          
 
-          </Box>
+          </Grid>
+    
+     
           <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: { xs: 'none', md: 'flex', sm:'flex' } }}>
             <IconButton size="large" >
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={4} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit">S'identifier</Button>
           </Box>
 
           <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
@@ -169,13 +167,13 @@ export default function PrimarySearchAppBar() {
                 <SearchIcon/>
             </IconButton>
             
-          <IconButton size="large"   > 
+          <IconButton size="large"  > 
           <Badge badgeContent={4} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
         
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">S'identifier</Button>
           </Box>
         </Toolbar>
       </AppBar>

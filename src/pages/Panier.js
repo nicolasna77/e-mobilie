@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Breadcrumb from '../componant/Breadcrumbs';
+import Breadcrumb from '../componant/Breadcrumb';
 import ListPanier from '../componant/ListPanier'
 import StepperPanier from '../componant/Stepper'
 
@@ -13,7 +13,7 @@ function Panier(){
 <div>
 
 
-<Breadcrumb />  
+ 
 <StepperPanier />
 
 
