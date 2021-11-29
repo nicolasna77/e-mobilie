@@ -16,6 +16,11 @@ export const data = [
         category: "Salon",
         image: "/SalleDeBain.jpg",
         stars: '3',
+        option:[ 
+            {
+                color:"#444"
+}],
+
     },{
         id:3,
         title: "Grande table",

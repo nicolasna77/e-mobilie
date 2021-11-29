@@ -188,9 +188,9 @@ function Accueil() {
             <Box pt={{ xs: 3, md: 3 }} pb={{ xs: 5, md: 10 }} sx={{ maxWidth: [1100], margin:"0 auto!important", padding:"10px" }}>
             <Grid container spacing={3}   >
 
-                {data.map((data, i) => {
+                {data.map((data) => {
                     return (
-          <CardPop {...data}/>
+          <CardPop {...data }/>
           )
         })}
 

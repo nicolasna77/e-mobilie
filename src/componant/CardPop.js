@@ -53,9 +53,7 @@ function MyFormControlLabel(props) {
   }
   
   MyFormControlLabel.propTypes = {
-    /**
-     * The value of the component.
-     */
+  
     value: PropTypes.any,
   };
 
@@ -67,11 +65,12 @@ function MyFormControlLabel(props) {
     description: string;
     stars: Number;
     price: Number;
+    option: option[];
 
   }
 
 
-export default function CardPop({title,image,description, stars, price}: Props) {
+export default function CardPop({title,image,description, stars, price, option}):props {
   
   
 
@@ -136,11 +135,16 @@ export default function CardPop({title,image,description, stars, price}: Props) 
                                             <CardActions>
                                                     <FormControl  >
 
-                                                    <RadioGroup row aria-label="gender" name="row-radio-buttons-group" defaultValue="a">
-                                                        <div>
-                                                        <FormControlLabel value="a" label="" control={<Radio />} size="small"color="default"/>
-                                                        <FormControlLabel value="b" label="" control={<Radio />} size="small"color="default"/>
-                                                        </div>
+                                                    <RadioGroup row size="small" aria-label="gender" name="row-radio-buttons-group" defaultValue="a">
+                                                       
+                                                    {/* {option.keys(option).map((key) => {
+
+                                                        return( */}
+                                                        <FormControlLabel value="" label="" control={<Radio />} size="small" color="" />   
+                                                        
+                                                        {/* )})};  */}
+                                                       
+                                                        
                                                     </RadioGroup>
                                                     </FormControl>
 
