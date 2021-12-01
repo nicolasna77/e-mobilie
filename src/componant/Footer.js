@@ -10,8 +10,7 @@ export default function Footer() {
   return (
     <Box
       pt={{ xs: 3, md: 5 }}
-    //  py={{ xs: 5, sm: 12 }}
-      
+   
     >
     <footer className="footer" >
     <Box
@@ -91,6 +90,10 @@ export default function Footer() {
               </Link>
             </Box>
           </Grid>
+
+
+
+
         </Grid>
         </Box>
 

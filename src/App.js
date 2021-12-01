@@ -8,6 +8,8 @@ import PrimarySearchAppBar  from './componant/appBar';
 import Footer  from './componant/Footer';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Breadcrumb from "./componant/Breadcrumb";
+import Inscription from "./pages/Inscription";
+import Produit from "./pages/Produit";
 
 
 
@@ -49,8 +51,9 @@ function App() {
          <Routes>
                 <Route exact path="/" element={<Accueil/>} />
                 <Route  path="/Panier" element={<Panier/>} />
+                <Route  path="/Produit" element={<Produit/>} />
                 <Route  path="/Connection" element={<Login/>} />
-               
+                <Route  path="/Inscription" element={<Inscription/>} />
            </Routes>
     
      

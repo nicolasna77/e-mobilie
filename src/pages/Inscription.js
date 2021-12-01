@@ -13,7 +13,7 @@ import { Box } from "@mui/system"
 
 
 
-export default function login() {
+export default function Inscription() {
 
   
         return (
@@ -27,12 +27,34 @@ export default function login() {
                 <Avatar >
                   <LockOutlinedIcon />
                 </Avatar>
-                <Typography variant="h5">S'identifier</Typography>
+                <Typography variant="h5">inscription</Typography>
               </Container>
-              
+              <Box pt={{ xs: 3, md: 3 }} pb={{ xs: 3, md: 3 }}>
               <form >
                 <Grid container spacing={2}>
-                
+                <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="fname"
+                name="firstName"
+                variant="filled"
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="filled"
+                required
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                name="lastName"
+                autoComplete="lname"
+              />
+            </Grid>
                   <Grid item xs={12}>
                     <TextField
                       variant="filled"
@@ -59,7 +81,7 @@ export default function login() {
                 <Box pt={{ xs: 2, md: 2 }} pb={{ xs: 1, md: 1 }}>
                   <Button
                     type="submit"
-                    fullWidth
+                   
                     variant="contained"
                     color="secondary"
                   >
@@ -74,6 +96,7 @@ export default function login() {
                   </Grid>
                 </Grid>
               </form>
+              </Box>
             </div>
           </Container>
           </Box>

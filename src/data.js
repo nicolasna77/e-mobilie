@@ -16,8 +16,7 @@ export const data = [
         category: "Salon",
         image: "/SalleDeBain.jpg",
         stars: '3',
-        option:[ 
-            {
+        option:[{
                 color:"#444"
 }],
 

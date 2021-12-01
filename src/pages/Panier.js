@@ -11,11 +11,8 @@ function Panier(){
     return(
 
 <div>
-
-
  
 <StepperPanier />
-
 
 <ListPanier />
 
