@@ -29,7 +29,6 @@ export default function ListPanier() {
   
     const [dense, setDense] = React.useState(false);
     const [secondary, setSecondary] = React.useState(false);
-
     return (
         <Box pt={{ xs: 8, md: 8 }} sx={{margin: 'auto', maxWidth:"1300px !important"}}>
             

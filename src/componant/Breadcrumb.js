@@ -6,10 +6,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
 
 export default function AppBreadcrumbs() {
-    let navigate = useNavigate();
-    let location = useLocation();
+    const navigate = useNavigate();
+    const location = useLocation();
+
     let currentRoutes = []
+
     currentRoutes = location.pathname !== '/' ? location.pathname.split('/') : [];
+
     if (currentRoutes.length > 0) {
         currentRoutes.shift();
         return (

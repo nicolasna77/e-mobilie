@@ -6,11 +6,10 @@ import Login  from './pages/Login';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import PrimarySearchAppBar  from './componant/appBar';
 import Footer  from './componant/Footer';
-import { useLocation, useNavigate } from 'react-router-dom';
 import Breadcrumb from "./componant/Breadcrumb";
 import Inscription from "./pages/Inscription";
 import Produit from "./pages/Produit";
-
+import Profil from "./pages/Profil"
 
 
 
@@ -20,7 +19,7 @@ const theme = createTheme({
     palette: {
         type: 'light',
         primary: {
-          main: '#a2a2a2',
+          main: '#9c1019',
           contrastText: 'rgba(49,49,49,0.87)',
         },
         secondary: {
@@ -54,6 +53,8 @@ function App() {
                 <Route  path="/Produit" element={<Produit/>} />
                 <Route  path="/Connection" element={<Login/>} />
                 <Route  path="/Inscription" element={<Inscription/>} />
+                <Route  path="/Profil" element={<Profil/>} />
+
            </Routes>
     
      

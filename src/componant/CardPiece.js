@@ -5,7 +5,7 @@ import * as React from 'react';
 
 
 
-export default function cardPiece(props) {
+export default function cardPiece() {
 
   return (
 
