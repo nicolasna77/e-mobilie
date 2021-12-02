@@ -46,7 +46,6 @@ function App() {
 <PrimarySearchAppBar/>
 
 <Breadcrumb />
-
          <Routes>
                 <Route exact path="/" element={<Accueil/>} />
                 <Route  path="/Panier" element={<Panier/>} />
@@ -56,9 +55,6 @@ function App() {
                 <Route  path="/Profil" element={<Profil/>} />
 
            </Routes>
-    
-     
-   
 </Router>  
 <Footer/>
 

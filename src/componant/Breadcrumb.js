@@ -4,6 +4,7 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function AppBreadcrumbs() {
     const navigate = useNavigate();
@@ -18,8 +19,8 @@ export default function AppBreadcrumbs() {
         return (
             <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 3, md: 5 }}>
         <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: 15 }}>
-        <Link color="inherit" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        Accueil
+        <Link color="inherit" onClick={() => navigate('/')} style={{ cursor: 'pointer', verticalAlign:"-webkit-baseline-middle" }}>
+        <HomeIcon fontSize="small"/>
         </Link>
         {
         currentRoutes.length === 1
