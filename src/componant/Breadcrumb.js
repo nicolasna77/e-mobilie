@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import Link from '@mui/material/Link';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/system';
 
