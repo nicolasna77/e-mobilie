@@ -30,6 +30,12 @@ body {
     height: 100%;
 }
 
+@media (any-hover: hover) {
+    .buttonFavorite {
+        display: block;
+    }
+}
+
 .cardProduct:hover .buttonFavorite {
     display: block !important;
 }

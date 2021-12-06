@@ -8,6 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import PersonIcon from '@mui/icons-material/Person';
 import ArticleIcon from '@mui/icons-material/Article';
 import IosShareIcon from '@mui/icons-material/IosShare';
+import { Paper } from '@mui/material';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,47 +56,44 @@ export default function Profil() {
     return (
 
 
-        <Box
-          sx={{flexGrow: 1, bgcolor: 'background.paper',  height: "100vh" }} >
-        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-            <Tabs
+      <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }} sx={{ display: { xs: 'block !', sm: 'flex', } }}>
+        <Box sx={{ height: "100vh", display: { xs: 'none', sm: 'flex' } }}>
+          <Tabs
             orientation="vertical"
-
             value={value}
             onChange={handleChange}
-            aria-label="Vertical tabs Profil"
-            sx={{borderRight: 1, borderColor: 'divider' }}
-            >
-            <Tab icon={<PersonIcon fontSize="small" />} iconPosition="start"  label="Mon Profil" {...a11yProps(0)} />
-            <Tab icon={<ArticleIcon fontSize="small"/>} iconPosition="start" label="Mes commandes" {...a11yProps(1)} />
-            <Tab icon={<FavoriteIcon fontSize="small"/>} iconPosition="start" label="Mes Favoris" {...a11yProps(2)} />
-            <Tab icon={<IosShareIcon fontSize="small"/>} iconPosition="start" label="Admin" {...a11yProps(3)} />
-            
-            </Tabs>
+            sx={{ borderRight: 1, borderColor: 'divider' }}
+          >
+            <Tab icon={<PersonIcon fontSize="small" />} iconPosition="start" label="Mon Profil" {...a11yProps(0)} />
+            <Tab icon={<ArticleIcon fontSize="small" />} iconPosition="start" label="Mes commandes" {...a11yProps(1)} />
+            <Tab icon={<FavoriteIcon fontSize="small" />} iconPosition="start" label="Mes Favoris" {...a11yProps(2)} />
+            <Tab icon={<IosShareIcon fontSize="small" />} iconPosition="start" label="Admin" {...a11yProps(3)} />
+
+          </Tabs>
         </Box>
 
-        <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-            <Tabs
+        <Box sx={{ display: { xs: 'flex', sm: 'none', } }}>
+          <Tabs
             orientation="horizontal"
             scrollButtons="auto"
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs Profil"
-            sx={{borderRight: 1, borderColor: 'divider' }}
-            >
-            <Tab icon={<PersonIcon fontSize="small" />} iconPosition="start"  label="Mon Profil" {...a11yProps(0)} />
-            <Tab icon={<ArticleIcon fontSize="small"/>} iconPosition="start" label="Mes commandes" {...a11yProps(1)} />
-            <Tab icon={<FavoriteIcon fontSize="small"/>} iconPosition="start" label="Mes Favoris" {...a11yProps(2)} />
-            <Tab icon={<IosShareIcon fontSize="small"/>} iconPosition="start" label="Admin" {...a11yProps(3)} />
-            
-            </Tabs>
+            sx={{ borderRight: 1, borderColor: 'divider', display: "inline" }}
+          >
+            <Tab icon={<PersonIcon fontSize="small" />} iconPosition="start" label="Mon Profil" {...a11yProps(0)} />
+            <Tab icon={<ArticleIcon fontSize="small" />} iconPosition="start" label="Mes commandes" {...a11yProps(1)} />
+            <Tab icon={<FavoriteIcon fontSize="small" />} iconPosition="start" label="Mes Favoris" {...a11yProps(2)} />
+            <Tab icon={<IosShareIcon fontSize="small" />} iconPosition="start" label="Admin" {...a11yProps(3)} />
+
+          </Tabs>
         </Box>
 
 
 
 
         <TabPanel value={value} index={0}>
-          Item One
+          <Paper color="secondary" elevation={1} > Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur omnis provident voluptatem obcaecati, natus sequi sed voluptates consequatur delectus dolores odit laudantium blanditiis assumenda possimus est necessitatibus qui numquam esse.  </Paper>
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two

@@ -41,7 +41,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-
 <Router>
 <PrimarySearchAppBar/>
 
