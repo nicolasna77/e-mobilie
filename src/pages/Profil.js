@@ -9,6 +9,11 @@ import PersonIcon from '@mui/icons-material/Person';
 import ArticleIcon from '@mui/icons-material/Article';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Paper } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
+import { Grid } from '@mui/material';
+
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,8 +97,21 @@ export default function Profil() {
 
 
 
+        
         <TabPanel value={value} index={0}>
-          <Paper color="secondary" elevation={1} > Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur omnis provident voluptatem obcaecati, natus sequi sed voluptates consequatur delectus dolores odit laudantium blanditiis assumenda possimus est necessitatibus qui numquam esse.  </Paper>
+     
+     
+
+          <Paper color="secondary" elevation={1} >
+
+            <span>
+              <Avatar> </Avatar>
+              <Typography> Nicolas Abreu</Typography>
+
+            </span>
+          </Paper>
+      
+
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two

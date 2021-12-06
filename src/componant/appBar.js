@@ -10,34 +10,30 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import Paper from '@mui/material/Paper';
-import {  Grid } from '@mui/material';
-import   {useNavigate}  from 'react-router-dom';
+import  {Grid}  from '@mui/material';
+import  {useNavigate}  from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import LockIcon from '@mui/icons-material/Lock';
-
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
 
 
 export default function PrimarySearchAppBar() {
 
 const navigate = useNavigate();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+
   const handleClose = () => {
     setAnchorEl(null);
   }
-
-
-
 
 
 
@@ -46,33 +42,37 @@ const navigate = useNavigate();
       <AppBar color="default" position="relative" style={{ flexWrap: 'wrap'}} >
         <Toolbar>
         <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-        <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-           
-          >
-            <MenuIcon />
+          <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}>
+
+              <MenuIcon />
+
           </IconButton>
-          </Box>
+
+        </Box>
+
         <div>
         <img onClick={() => navigate('/')} class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} /> 
         </div>
 
    
 <Grid container justifyContent="center" sx={{ display: { xs: 'none', sm: 'flex' } }}>
-            <Paper component="form" >
-              <IconButton sx={{ p: '10px' }} aria-label="menu">
-                <MenuIcon />
-              </IconButton>
-           
-              <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Recherche" inputProps={{ 'aria-label': 'Recherche' }}
-              />
-              <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+
+            <Box sx={{marginRight:"20px", alignSelf:"center"}} >
+              <Chip color="primary" icon={<MenuIcon/> }  label="Categorie"   aria-label="menu" />
+            </Box>
+             
+               <Paper component="form" >
+            <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
                 <SearchIcon />
               </IconButton>
+              <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Recherche" inputProps={{ 'aria-label': 'Recherche' }}
+              />
+             
 
             </Paper>
 

@@ -31,7 +31,7 @@ class FavoriteButton extends React.Component {
     render() {
         return (
             <IconButton  className="buttonFavorite" onClick={() => this.setState({ favoriteIcon: !this.state.favoriteIcon })}>
-                {this.state.favoriteIcon ? <Favorite color='error' /> : <FavoriteBorderIcon />
+                {this.state.favoriteIcon ? <Favorite color='error' /> : <FavoriteBorderIcon color="action"/>
                 }
 
             </IconButton>
@@ -40,11 +40,9 @@ class FavoriteButton extends React.Component {
 
 }
 
-function MyFormControlLabel(props) {
+function MyFormControlLabel(Props) {
     const radioGroup = useRadioGroup();
-  
     let checked = false;
-  
     if (radioGroup) {
       checked = radioGroup.value === props.value;
     }
@@ -53,7 +51,6 @@ function MyFormControlLabel(props) {
   }
   
   MyFormControlLabel.propTypes = {
-  
     value: PropTypes.any,
   };
 
@@ -78,14 +75,9 @@ export default function CardPop({title,image,description, stars, price, option})
 
 
                         <Grid item xs="6" sm="4" md="3" >
-                             <Grow
-                            
-   in="true"
-    style={{ transformOrigin: '0 0 0' }}
-     timeout= "1000" 
-  >
+                             <Grow in="true" style={{ transformOrigin: '0 0 0' }} timeout= "1000">
 
-                            <Card  className="cardProduct">
+                            <Card elevation="0"  className="cardProduct">
 
                                 <FavoriteButton />
 
@@ -95,14 +87,12 @@ export default function CardPop({title,image,description, stars, price, option})
                                         component="img"
                                         height="170"
                                         src={image}
-                                        alt={`Preview of ${title}`}
-                                    />
+                                        alt={`Preview of ${title}`}/>
 
                                     <CardContent>
-                                        <Grid container xs={12}  >
+                                      
 
-                                            <Grid item xs={12} sm={12} >
-                                                <div>
+                                          
                                                     <Box >
                                                         <Rating
                                                             value={stars}
@@ -112,12 +102,12 @@ export default function CardPop({title,image,description, stars, price, option})
                                                             precision={0.5}
                                                         />
                                                     </Box>
-                                                </div>
-                                            </Grid>
+                                            
+                                      
 
                                            
-                                        </Grid>
-                                        <Typography gutterBottom variant="h6" component="div">
+                                      
+                                        <Typography gutterBottom variant="subtitle2" component="div">
                                             {title}
                                         </Typography>
 
