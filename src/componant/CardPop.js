@@ -20,6 +20,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Grow from '@mui/material/Grow';
 
 
+// api pour gerer le system de couleur pour un article 
+import { CirclePicker  } from 'react-color';
+
+
+
 class FavoriteButton extends React.Component {
     constructor(props) {
         super(props);
@@ -41,6 +46,9 @@ class FavoriteButton extends React.Component {
 }
 
 function MyFormControlLabel(Props) {
+
+  
+
     const radioGroup = useRadioGroup();
     let checked = false;
     if (radioGroup) {
@@ -69,13 +77,12 @@ function MyFormControlLabel(Props) {
 
 export default function CardPop({title,image,description, stars, price, option}):props {
   
-  
 
   return(
 
 
                         <Grid item xs="6" sm="4" md="3" >
-                             <Grow in="true" style={{ transformOrigin: '0 0 0' }} timeout= "1000">
+                             <Grow in="to" >
 
                             <Card elevation="0"  className="cardProduct">
 
@@ -125,17 +132,16 @@ export default function CardPop({title,image,description, stars, price, option})
                                             <CardActions>
                                                     <FormControl  >
 
-                                                    <RadioGroup row size="small" aria-label="gender" name="row-radio-buttons-group" defaultValue="a">
+                                             
                                                        
                                                     {/* {option.keys(option).map((key) => {
 
                                                         return( */}
-                                                        <FormControlLabel value="" label="" control={<Radio />} size="small" color="" />   
-                                                        
+                                                       <CirclePicker   circleSize={20} height="12px" colors={['#D9E3F0', '#F47373', '#697689']}/>
                                                         {/* )})};  */}
                                                        
                                                         
-                                                    </RadioGroup>
+                                                
                                                     </FormControl>
 
 </CardActions>

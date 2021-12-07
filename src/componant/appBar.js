@@ -59,17 +59,18 @@ export default function PrimarySearchAppBar() {
             <img onClick={() => navigate('/')} class="logoHeader" alt="logo" src={process.env.PUBLIC_URL + '/logo.png'} />
           </div>
 
-          <Box sx={{ marginLeft: "20px", alignSelf: "center" }} >
-            <Button size="large" variant="" color="primary" aria-label="menu" >
-
-              <Box sx={{ marginRight: "20px" }} >
-                <Typography variant="caption"> Categorie</Typography>
-              </Box>
-              <ArrowDropDownIcon />
-            </ Button>
-          </Box>
-
+       
           <Grid container justifyContent="center" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+              <Box sx={{ marginLeft: "20px", alignSelf: "center" }} >
+                  
+                   <Button size="large" variant="" color="primary" aria-label="menu" >
+                          <Box sx={{ marginRight: "15px" }} >
+                            <Typography variant="button"> Pièces</Typography>
+                          </Box>
+                          <ArrowDropDownIcon />
+                   </ Button>
+
+              </Box>
 
 
             <Paper component="form" elevation="0" sx={{ borderRadius: "26px", maxWidth: "600px", border: "1px solid #dbdbdb" }} >
