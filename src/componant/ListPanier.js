@@ -51,12 +51,12 @@ export default function ListPanier() {
             <ListItem>
               <Grid item>
                 <ListItem>
-                  <img src="./salon.jpg" alt="" srcset="" width="120px" />
+                  <img src="./canapéBlanc.jpg" alt="" srcset="" width="120px" />
                 </ListItem>
               </Grid>
 
               <Grid item xs={7}>
-                <ListItemText primary="Table Salon" secondary="color : grey" />
+                <ListItemText primary="Canapé" secondary="color : grey" />
               </Grid>
 
               <Grid item xs="3">
@@ -82,12 +82,12 @@ export default function ListPanier() {
             <ListItem>
               <Grid item>
                 <ListItem>
-                  <img src="./SalleDeBain.jpg" alt="" srcset="" width="120px" />
+                  <img src="./tableBase.jpg" alt="" srcset="" width="120px" />
                 </ListItem>
               </Grid>
 
               <Grid item xs={7}>
-                <ListItemText primary="Table Salon" secondary="color : grey" />
+                <ListItemText primary="Table Base" secondary="color : grey" />
               </Grid>
 
               <Grid item xs="3">
@@ -132,7 +132,7 @@ export default function ListPanier() {
                 </Box>
 
                 <Box sx={{ width: "100%" }}>
-                  <Button variant="outlined" color="secondary">
+                  <Button variant="contained" color="secondary">
                     Valider mon panier
                   </Button>
                 </Box>

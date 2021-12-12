@@ -8,12 +8,14 @@ export default function SubFooter() {
       <Grid
         container
         spacing={3}
-        justifyItems="center"
+        direction="row"
         justifyContent="center"
-        alignContent="center"
+        alignItems="center"
       >
         <Grid item md="4" sm="6">
-          <img src="../secure-payment.png" width="64px" />
+          <Box>
+            <img src="../secure-payment.png" width="64px" />
+          </Box>
           <Typography variant="h6" color="primary" component="div">
             Payment simplifier
           </Typography>
@@ -21,14 +23,18 @@ export default function SubFooter() {
         </Grid>
 
         <Grid item md="4" sm="6">
-          <img src="../livraison.png" width="64px" />
+          <Box>
+            <img src="../livraison.png" width="64px" />
+          </Box>
           <Typography color="primary" variant="h6">
             Livraison rapide
           </Typography>
         </Grid>
 
         <Grid item md="4" sm="6">
-          <img src="../return.png" width="64px" />
+          <Box>
+            <img src="../return.png" width="64px" />
+          </Box>
           <Typography variant="h6" color="secondary">
             Retours Gratuits
           </Typography>
