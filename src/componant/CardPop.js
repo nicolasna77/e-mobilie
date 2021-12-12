@@ -12,7 +12,6 @@ import CardActions from "@mui/material/CardActions";
 import Favorite from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FormControl from "@mui/material/FormControl";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Grow from "@mui/material/Grow";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
@@ -108,9 +107,14 @@ export default function CardPop({
                 </Grid>
 
                 <Grid item xs={12} sm={12} md={12}>
-                  <IconButton color="primary" aria-label="add to shopping cart">
+                  <IconButton
+                    className="iconButtonAddShop"
+                    color="primary"
+                    aria-label="add to shopping cart"
+                  >
                     <AddShoppingCartIcon />
-                  </IconButton>{" "}
+                  </IconButton>
+
                   <Typography
                     sx={{ float: "right" }}
                     className="priceCardProduct"

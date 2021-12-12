@@ -26,9 +26,7 @@ body {
 }
 
 .iconButtonAddShop {
-  z-index: 999;
-  color: #fff !important;
-  position: relative !important;
+  position: absolute;
   display: none !important;
 }
 
@@ -37,14 +35,15 @@ body {
   height: 100%;
 }
 
-.cardProduct:hover .buttonFavorite,
-.iconButtonAddShop {
+.cardProduct:hover .buttonFavorite {
   display: block !important;
 }
 
 .cardProduct:hover .iconButtonAddShop {
   display: block !important;
+  position: absolute;
 }
+
 .priceCardProduct {
   margin-right: 0px !important;
   display: block;

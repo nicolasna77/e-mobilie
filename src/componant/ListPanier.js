@@ -74,7 +74,7 @@ export default function ListPanier() {
 
               <Grid item>
                 <IconButton edge="end" aria-label="delete">
-                  <DeleteIcon color="error" />
+                  <DeleteIcon fontSize="small" color="error" />
                 </IconButton>
               </Grid>
             </ListItem>
@@ -105,7 +105,7 @@ export default function ListPanier() {
 
               <Grid item>
                 <IconButton edge="end" aria-label="delete">
-                  <DeleteIcon color="error" />
+                  <DeleteIcon fontSize="small" color="error" />
                 </IconButton>
               </Grid>
             </ListItem>
@@ -114,26 +114,32 @@ export default function ListPanier() {
 
         <Grid item xs={12} sm={12} md={3}>
           <Box sx={{ width: "100%", textAlign: "center" }}>
-            <Paper>
-              <Box sx={{ width: "100%" }}>
-                <Box sx={{ width: "100%" }} mb="15px" mt="15px">
+            <Paper sx={{ bgcolor: "Background.secondary" }}>
+              <Box
+                sx={{
+                  width: "100%",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                }}
+              >
+                <Box sx={{ width: "100%" }} mb="25px" mt="15px">
                   <Typography variant="h6" component="span">
                     Total :
                   </Typography>
                   <Typography variant="h6" component="span">
-                    {" "}
                     9,99€
                   </Typography>
                 </Box>
 
                 <Box sx={{ width: "100%" }}>
-                  <Button variant="contained" color="secondary">
-                    {" "}
+                  <Button variant="outlined" color="secondary">
                     Valider mon panier
                   </Button>
                 </Box>
                 <Box sx={{ width: "100%" }} pt="10px">
-                  <Button color="secondary"> Continue mes achat</Button>
+                  <Button size="small" color="primary">
+                    Continue mes achat
+                  </Button>
                 </Box>
               </Box>
             </Paper>
