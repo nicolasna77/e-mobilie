@@ -1,72 +1,77 @@
 body {
-    margin: 0;
-    font-family: 'Roboto !important';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "Roboto !important";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 .logoHeader {
-    width: 60px;
+  width: 60px;
 }
 
 .cardPop {
-    padding: 15px;
+  padding: 15px;
 }
 
 .buttonFavorite {
-    z-index: 999;
-    color: #fff !important;
-    position: absolute!important;
-    display: none !important;
+  z-index: 999;
+  color: #fff !important;
+  position: absolute !important;
+  display: none !important;
+}
+
+.iconButtonAddShop {
+  z-index: 999;
+  color: #fff !important;
+  position: relative !important;
+  display: none !important;
 }
 
 .cardProduct {
-    z-index: 9!important;
-    height: 100%;
+  z-index: 9 !important;
+  height: 100%;
 }
 
-@media (any-hover: hover) {
-    .buttonFavorite {
-        display: block;
-    }
+.cardProduct:hover .buttonFavorite,
+.iconButtonAddShop {
+  display: block !important;
 }
 
-.cardProduct:hover .buttonFavorite {
-    display: block !important;
+.cardProduct:hover .iconButtonAddShop {
+  display: block !important;
 }
-
 .priceCardProduct {
-    margin-right: 0px !important;
-    display: block;
-    vertical-align: center;
+  margin-right: 0px !important;
+  display: block;
+  vertical-align: center;
 }
 
 .divider {
-    height: 4px;
-    background-color: #98131d;
-    border-radius: 5px;
+  height: 4px;
+  background-color: #98131d;
+  border-radius: 5px;
 }
 
 .iconFilter {
-    z-index: 999;
+  z-index: 999;
 }
 
 .menuSort {
-    z-index: 999;
+  z-index: 999;
 }
 
 .titleCardPop {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
