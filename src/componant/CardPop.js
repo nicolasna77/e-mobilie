@@ -119,7 +119,7 @@ export default function CardPop({
                     sx={{ float: "right" }}
                     className="priceCardProduct"
                     gutterBottom
-                    variant="h6"
+                    variant="subtitle2"
                     component="div"
                   >
                     {price} €

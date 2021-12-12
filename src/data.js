@@ -51,11 +51,11 @@ export const data = [
   },
   {
     id: 6,
-    title: "grande table",
-    price: "509.95",
+    title: "Pouffe",
+    price: "45.95",
     description: "Your perfect pack for everyday.",
     category: "Chambre",
-    image: "/SalleDeBain.jpg",
+    image: "/pouffe.jpg",
     stars: "5",
   },
 ];
