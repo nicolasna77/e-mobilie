@@ -20,25 +20,24 @@ export default function AppBreadcrumbs() {
             <Box pt={{ xs: 3, md: 3 }} pl={{ xs: 3, md: 5 }}>
                 <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: 15 }}>
                     <Link color="inherit" onClick={() => navigate('/')} style={{ cursor: 'pointer', verticalAlign: "-webkit-baseline-middle" }}>
-                        <HomeIcon  fontSize="small" />
+                        <HomeIcon fontSize="small" />
                     </Link>
                     {
                         currentRoutes.length === 1 ? <Typography color="textPrimary">{currentRoutes[0]}</Typography>
-                            : currentRoutes.map((route, index) => 
-                            {
+                            : currentRoutes.map((route, index) => {
                                 return (
                                     index !== currentRoutes.length - 1 ? <Link key={index} color="inherit" style={{ cursor: 'pointer' }} onClick={() => {
                                         navigate(route)
                                     }} >
                                         {route}
                                     </Link>
-                                    : <Typography key={index} color="textPrimary">{route}</Typography>)
+                                        : <Typography key={index} color="textPrimary">{route}</Typography>)
                             })
                     }
                 </Breadcrumbs>
             </Box>
         );
     }
-        else
-          return <></>
-  }
+    else
+        return <></>
+}
