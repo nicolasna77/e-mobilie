@@ -42,7 +42,7 @@ export const data = [
   },
   {
     id: 5,
-    title: "Tapie",
+    title: "Tapis",
     price: "200",
     description: "Your perfect pack for everyday.",
     category: "Cusine",
