@@ -4,7 +4,7 @@ import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import SubFooter from "./SubFooter";
+import SubFooter from "./Subfooter";
 
 export default function Footer() {
   return (
