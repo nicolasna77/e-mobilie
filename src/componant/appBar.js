@@ -72,14 +72,14 @@ export default function PrimarySearchAppBar() {
           <Grid
             container
             justifyContent="center"
-            sx={{ display: { xs: "none", sm: "flex" } }}
+            sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
           >
             <SearchBarAuto />
           </Grid>
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: "none", md: "flex", sm: "flex" } }}>
+          <Box sx={{ display: { xs: "none", md: "flex", sm: "none" } }}>
             <IconButton onClick={() => navigate("/Panier")} size="large">
               <Badge badgeContent={4} color="secondary">
                 <ShoppingCartIcon />
@@ -93,7 +93,7 @@ export default function PrimarySearchAppBar() {
 
           {/* version mobile */}
 
-          <Box sx={{ display: { xs: "flex", sm: "none" } }}>
+          <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
             <IconButton size="large">
               <SearchIcon />
             </IconButton>

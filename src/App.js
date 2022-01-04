@@ -11,6 +11,7 @@ import Inscription from "./pages/Inscription";
 import Produit from "./pages/Produit";
 import Profil from "./pages/Profil";
 import Nunito from "../src/font/Nunito-Italic-VariableFont_wght.ttf";
+import Produits from "./pages/Produits";
 
 const theme = createTheme({
   typography: {
@@ -63,6 +64,7 @@ function App() {
           <Route path="/Connection" element={<Login />} />
           <Route path="/Inscription" element={<Inscription />} />
           <Route path="/Profil" element={<Profil />} />
+          <Route path="/Produits" element={<Produits />} />
         </Routes>
       </Router>
       <Footer />

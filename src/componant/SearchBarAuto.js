@@ -10,7 +10,7 @@ export default function SearchBarAuto() {
       elevation="0"
       sx={{
         borderRadius: "26px",
-        maxWidth: "600px",
+        width: "350px",
         border: "1px solid #dbdbdb",
       }}
     >

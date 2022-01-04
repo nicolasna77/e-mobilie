@@ -4,34 +4,48 @@ import React from "react";
 
 export default function SubFooter() {
   return (
-    <Box pb={"20px"} sx={{ bgcolor: "#e7e7e7" }}>
-      <Grid container justifie="center" alignContent="center" spacing={3}>
-        <Grid item md="4" sm="6">
+    <Box pb={"25px"} sx={{ bgcolor: "#e7e7e7" }}>
+      <Grid
+        container
+        justifyItems="center"
+        justifie="center"
+        justifyContent="center"
+        alignContent="center"
+        spacing={4}
+      >
+        <Grid item xs="6" md="4" sm="6">
           <Box justifyItems="center">
-            <img src="../secure-payment.png" width="64px" />
+            <img className="imgSubFooter" src="../secure-payment.png" />
           </Box>
-          <Typography variant="h6" color="primary" component="div">
+          <Typography
+            textAlign="center"
+            variant="h6"
+            color="primary"
+            component="div"
+          >
             Payment simplifier
           </Typography>
         </Grid>
 
-        <Grid item md="4" sm="6">
+        <Grid item xs="6" md="4" sm="6">
           <Box>
-            <img src="../livraison.png" width="64px" />
+            <img className="imgSubFooter" src="../livraison.png" />
           </Box>
-          <Typography color="primary" variant="h6">
+          <Typography textAlign="center" color="primary" variant="h6">
             Livraison rapide
           </Typography>
         </Grid>
 
-        <Grid item md="4" sm="6">
+        <Grid item xs="6" md="4" sm="6">
           <Box>
-            <img src="../return.png" width="64px" />
+            <img className="imgSubFooter" src="../return.png" />
           </Box>
-          <Typography variant="h6" color="secondary">
+          <Typography variant="h6" color="secondary" textAlign="center">
             Retours Gratuits
           </Typography>
-          <Typography variant="body2">Sous 30 jours</Typography>
+          <Typography variant="body2" textAlign="center">
+            Sous 30 jours
+          </Typography>
         </Grid>
       </Grid>
     </Box>

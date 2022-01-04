@@ -16,7 +16,14 @@ export default function Footer() {
           color="grey.400"
         >
           <SubFooter />
-          <Grid container justifyContent="center" pt={{ xs: 5, md: 5 }}>
+          <Grid
+            container
+            justifyItems="center"
+            justifie="center"
+            justifyContent="center"
+            alignContent="center"
+            pt={{ xs: 5, md: 5 }}
+          >
             <Grid item justifyContent="center">
               <div>
                 <img
