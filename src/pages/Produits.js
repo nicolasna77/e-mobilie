@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box } from "@mui/system";
 import CardPop from "../componant/CardPop";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import data from "../data";
 import Filter from "../componant/Filter";
 

@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
+import { Button } from "@mui/material";
 
 export default function Filter() {
   const [open, setOpen] = React.useState(false);
@@ -61,121 +62,117 @@ export default function Filter() {
           <Divider className="divider" />
         </div>
       </Grid>
-      <Grid container xs={3} sm={4} md={2.9}></Grid>
+      <Grid container xs={3} sm={3} md={2}></Grid>
 
-      <Grid container xs={3} sm={2} md={1.1}>
-        <Grid item margin="0 auto!important">
-          <div>
-            <IconButton
-              className="iconFilter"
-              ref={anchorRefFilter}
-              id="filter-button"
-              aria-controls={openFilter ? "menuFilter" : undefined}
-              aria-expanded={openFilter ? "true" : undefined}
-              aria-haspopup="true"
-              onClick={handleToggle}
-            >
-              <FilterAltIcon />
-            </IconButton>
+      <Grid item margin="0 auto!important">
+        <div>
+          <Button
+            ref={anchorRefFilter}
+            variant="outlined"
+            color="primary"
+            id="filter-button"
+            aria-controls={openFilter ? "menuFilter" : undefined}
+            aria-expanded={openFilter ? "true" : undefined}
+            aria-haspopup="true"
+            startIcon={<FilterAltIcon />}
+            onClick={handleToggle}
+          >
+            Trier par
+          </Button>
 
-            <Popper
-              openFilter={openFilter}
-              anchorEl={anchorRefFilter.current}
-              placement="bottom-start"
-              transition
-              disablePortal
-              className="menuFilter"
-            >
-              {({ TransitionProps, placement }) => (
-                <Grow
-                  {...TransitionProps}
-                  style={{
-                    transformOrigin: (placement = "right top"),
-                  }}
-                >
-                  <Paper>
-                    <ClickAwayListener onClickAway={handleCloseFilter}>
-                      <MenuList
-                        autoFocusItem={openFilter}
-                        id="menuFilter"
-                        aria-labelledby="filter-button"
-                      >
-                        <MenuItem onClick={handleCloseFilter}>hrthrhr</MenuItem>
-                        <MenuItem onClick={handleCloseFilter}>
-                          Prix décroissants
-                        </MenuItem>
-                        <MenuItem onClick={handleCloseFilter}>
-                          Notes croissantes
-                        </MenuItem>
-                        <MenuItem onClick={handleCloseFilter}>
-                          Notes décroissantes
-                        </MenuItem>
-                      </MenuList>
-                    </ClickAwayListener>
-                  </Paper>
-                </Grow>
-              )}
-            </Popper>
-          </div>
-        </Grid>
+          <Popper
+            openFilter={openFilter}
+            anchorEl={anchorRefFilter.current}
+            placement="bottom-start"
+            transition
+            disablePortal
+            className="menuFilter"
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin: (placement = "right top"),
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleCloseFilter}>
+                    <MenuList
+                      autoFocusItem={openFilter}
+                      id="menuFilter"
+                      aria-labelledby="filter-button"
+                    >
+                      <MenuItem onClick={handleCloseFilter}>hrthrhr</MenuItem>
+                      <MenuItem onClick={handleCloseFilter}>
+                        Prix décroissants
+                      </MenuItem>
+                      <MenuItem onClick={handleCloseFilter}>
+                        Notes croissantes
+                      </MenuItem>
+                      <MenuItem onClick={handleCloseFilter}>
+                        Notes décroissantes
+                      </MenuItem>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </div>
 
-        <Grid item margin="0 auto!important">
-          <div>
-            <IconButton
-              ref={anchorRef}
-              id="composition-button"
-              aria-controls={open ? "composition-menu" : undefined}
-              aria-expanded={open ? "true" : undefined}
-              aria-haspopup="true"
-              onClick={handleToggle}
-              className="iconSort"
-            >
-              <SortIcon />
-            </IconButton>
+        <div>
+          <IconButton
+            ref={anchorRef}
+            id="composition-button"
+            aria-controls={open ? "composition-menu" : undefined}
+            aria-expanded={open ? "true" : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle}
+            className="iconSort"
+          >
+            <SortIcon />
+          </IconButton>
 
-            <Popper
-              open={open}
-              anchorEl={anchorRef.current}
-              role={undefined}
-              placement="bottom-start"
-              transition
-              disablePortal
-              className="menuSort"
-            >
-              {({ TransitionProps, placement }) => (
-                <Grow
-                  {...TransitionProps}
-                  style={{
-                    transformOrigin: (placement = "right top"),
-                  }}
-                >
-                  <Paper>
-                    <ClickAwayListener onClickAway={handleClose}>
-                      <MenuList
-                        autoFocusItem={open}
-                        id="composition-menu"
-                        aria-labelledby="composition-button"
-                      >
-                        <MenuItem onClick={handleClose}>
-                          Prix croissants
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                          Prix décroissants
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                          Notes croissantes
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                          Notes décroissantes
-                        </MenuItem>
-                      </MenuList>
-                    </ClickAwayListener>
-                  </Paper>
-                </Grow>
-              )}
-            </Popper>
-          </div>
-        </Grid>
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            placement="bottom-start"
+            transition
+            disablePortal
+            className="menuSort"
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin: (placement = "right top"),
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList
+                      autoFocusItem={open}
+                      id="composition-menu"
+                      aria-labelledby="composition-button"
+                    >
+                      <MenuItem onClick={handleClose}>Prix croissants</MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        Prix décroissants
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        Notes croissantes
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        Notes décroissantes
+                      </MenuItem>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </div>
       </Grid>
     </Grid>
   );
