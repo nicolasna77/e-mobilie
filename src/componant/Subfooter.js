@@ -20,7 +20,7 @@ export default function SubFooter() {
           <Typography
             textAlign="center"
             variant="h6"
-            color="primary"
+            color="secondary"
             component="div"
           >
             Payment simplifier
@@ -31,7 +31,7 @@ export default function SubFooter() {
           <Box>
             <img className="imgSubFooter" src="../livraison.png" />
           </Box>
-          <Typography textAlign="center" color="primary" variant="h6">
+          <Typography textAlign="center" color="secondary" variant="h6">
             Livraison rapide
           </Typography>
         </Grid>

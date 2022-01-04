@@ -62,7 +62,7 @@ export default function Filter() {
           <Divider className="divider" />
         </div>
       </Grid>
-      <Grid container xs={3} sm={3} md={2}></Grid>
+      <Grid item xs="auto"></Grid>
 
       <Grid item margin="0 auto!important">
         <div>
@@ -118,9 +118,7 @@ export default function Filter() {
               </Grow>
             )}
           </Popper>
-        </div>
 
-        <div>
           <IconButton
             ref={anchorRef}
             id="composition-button"
