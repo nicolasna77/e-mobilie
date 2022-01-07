@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea } from "@mui/material";
+import { CardActionArea } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
 import Rating from "@mui/material/Rating";
@@ -108,18 +108,17 @@ export default function CardPop({
 
                 <Grid item xs={12} sm={12} md={12}>
                   <IconButton
-                    className="iconButtonAddShop"
                     color="primary"
-                    aria-label="add to shopping cart"
+                    className="iconButtonAddShop"
+                    aria-label="ajouter au panier"
                   >
                     <AddShoppingCartIcon />
                   </IconButton>
-
                   <Typography
                     sx={{ float: "right" }}
                     className="priceCardProduct"
                     gutterBottom
-                    variant="subtitle2"
+                    variant="h6"
                     component="div"
                   >
                     {price} €

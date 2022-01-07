@@ -31,7 +31,6 @@ export default function Filter() {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
     setOpen(false);
   };
 
@@ -53,18 +52,16 @@ export default function Filter() {
       sm={12}
       md={12}
     >
-      <Grid container xs={6} sm={6} md={8}>
+      <Grid item xs="auto">
         <div className="titleCardPop">
           <Typography gutterBottom variant="h6" component="div">
             Recherche :
           </Typography>
-
           <Divider className="divider" />
         </div>
       </Grid>
-      <Grid item xs="auto"></Grid>
 
-      <Grid item margin="0 auto!important">
+      <Grid item xs="4" sm="3" md="2" margin="0 auto!important">
         <div>
           <Button
             ref={anchorRefFilter}

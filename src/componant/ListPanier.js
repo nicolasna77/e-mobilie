@@ -51,12 +51,12 @@ export default function ListPanier() {
             <ListItem>
               <Grid item>
                 <ListItem>
-                  <img src="./canapéBlanc.jpg" alt="" srcset="" width="120px" />
+                  <img src="./salon.jpg" alt="" srcset="" width="120px" />
                 </ListItem>
               </Grid>
 
               <Grid item xs={7}>
-                <ListItemText primary="Canapé" secondary="color : grey" />
+                <ListItemText primary="Table Salon" secondary="color : grey" />
               </Grid>
 
               <Grid item xs="3">
@@ -74,7 +74,7 @@ export default function ListPanier() {
 
               <Grid item>
                 <IconButton edge="end" aria-label="delete">
-                  <DeleteIcon fontSize="small" color="error" />
+                  <DeleteIcon color="error" />
                 </IconButton>
               </Grid>
             </ListItem>
@@ -82,12 +82,12 @@ export default function ListPanier() {
             <ListItem>
               <Grid item>
                 <ListItem>
-                  <img src="./tableBase.jpg" alt="" srcset="" width="120px" />
+                  <img src="./SalleDeBain.jpg" alt="" srcset="" width="120px" />
                 </ListItem>
               </Grid>
 
               <Grid item xs={7}>
-                <ListItemText primary="Table Base" secondary="color : grey" />
+                <ListItemText primary="Table Salon" secondary="color : grey" />
               </Grid>
 
               <Grid item xs="3">
@@ -105,7 +105,7 @@ export default function ListPanier() {
 
               <Grid item>
                 <IconButton edge="end" aria-label="delete">
-                  <DeleteIcon fontSize="small" color="error" />
+                  <DeleteIcon color="error" />
                 </IconButton>
               </Grid>
             </ListItem>
@@ -113,16 +113,10 @@ export default function ListPanier() {
         </Grid>
 
         <Grid item xs={12} sm={12} md={3}>
-          <Box sx={{ width: "100%", textAlign: "center" }}>
-            <Paper sx={{ bgcolor: "Background.secondary" }}>
-              <Box
-                sx={{
-                  width: "100%",
-                  paddingTop: "10px",
-                  paddingBottom: "10px",
-                }}
-              >
-                <Box sx={{ width: "100%" }} mb="25px" mt="15px">
+          <Box sx={{ width: "100%", textAlign: "center", padding: "20px" }}>
+            <Paper>
+              <Box sx={{ width: "100%" }}>
+                <Box sx={{ width: "100%" }} mb="15px" mt="15px">
                   <Typography variant="h6" component="span">
                     Total :
                   </Typography>
@@ -137,9 +131,7 @@ export default function ListPanier() {
                   </Button>
                 </Box>
                 <Box sx={{ width: "100%" }} pt="10px">
-                  <Button size="small" color="primary">
-                    Continue mes achat
-                  </Button>
+                  <Button color="secondary"> Continue mes achat</Button>
                 </Box>
               </Box>
             </Paper>
