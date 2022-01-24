@@ -113,7 +113,7 @@ export default function ListPanier() {
         </Grid>
 
         <Grid item xs={12} sm={12} md={3}>
-          <Box sx={{ width: "100%", textAlign: "center", padding: "20px" }}>
+          <Box sx={{ width: "100%", textAlign: "center" }}>
             <Paper>
               <Box sx={{ width: "100%" }}>
                 <Box sx={{ width: "100%" }} mb="15px" mt="15px">

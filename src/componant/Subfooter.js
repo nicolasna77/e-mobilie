@@ -15,7 +15,7 @@ export default function SubFooter() {
       >
         <Grid item xs="6" md="4" sm="6">
           <Box justifyItems="center">
-            <img className="imgSubFooter" src="../secure-payment.png" />
+            <img className="imgSubFooter" alt="" src="../secure-payment.png" />
           </Box>
           <Typography
             textAlign="center"
@@ -29,7 +29,7 @@ export default function SubFooter() {
 
         <Grid item xs="6" md="4" sm="6">
           <Box>
-            <img className="imgSubFooter" src="../livraison.png" />
+            <img className="imgSubFooter" alt="" src="../livraison.png" />
           </Box>
           <Typography textAlign="center" color="secondary" variant="h6">
             Livraison rapide
@@ -38,7 +38,7 @@ export default function SubFooter() {
 
         <Grid item xs="6" md="4" sm="6">
           <Box>
-            <img className="imgSubFooter" src="../return.png" />
+            <img className="imgSubFooter" alt="" src="../return.png" />
           </Box>
           <Typography variant="h6" color="secondary" textAlign="center">
             Retours Gratuits
