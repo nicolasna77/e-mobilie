@@ -72,7 +72,7 @@ export default function Filter() {
             aria-expanded={openFilter ? "true" : undefined}
             aria-haspopup="true"
             startIcon={<FilterAltIcon />}
-            onClick={handleToggle}
+            onClick={handleToggleFilter}
           >
             Trier par
           </Button>
@@ -115,7 +115,6 @@ export default function Filter() {
               </Grow>
             )}
           </Popper>
-
           <IconButton
             ref={anchorRef}
             id="composition-button"

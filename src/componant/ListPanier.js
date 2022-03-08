@@ -1,13 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { Button, Divider, Input } from "@mui/material";
-// import IconButton from '@mui/material/IconButton';
+import { Button, Input } from "@mui/material";
 import Typography from "@mui/material/Typography";
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import MenuItem from '@mui/material/MenuItem';
-// import Select from '@mui/material/Select';
-// import InputLabel from '@mui/material/InputLabel';
-// import FormControl from '@mui/material/FormControl';
 import Paper from "@mui/material/Paper";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
@@ -15,16 +9,9 @@ import Grid from "@mui/material/Grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ListItem from "@mui/material/ListItem";
 
-// const Img = styled('img')({
-//     margin: 'auto',
-//     display: 'block',
-//     maxWidth: '100%',
-//     maxHeight: '100%',
-// });
-
 export default function ListPanier() {
-  const [dense, setDense] = React.useState(false);
-  const [secondary, setSecondary] = React.useState(false);
+  // const [dense, setDense] = React.useState(false);
+  // const [secondary, setSecondary] = React.useState(false);
   return (
     <Box
       pt={{ xs: 8, md: 8 }}

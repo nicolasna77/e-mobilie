@@ -52,8 +52,11 @@ export default function Profil() {
   };
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: "background.paper", display: "flex" }}
-      sx={{ display: { xs: "block !", sm: "flex" } }}
+      sx={{
+        flexGrow: 1,
+        bgcolor: "background.paper",
+        display: { xs: "block", sm: "flex" },
+      }}
     >
       <Box sx={{ height: "100vh", display: { xs: "none", sm: "flex" } }}>
         <Tabs

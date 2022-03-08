@@ -60,7 +60,7 @@ export default function CardPop({
   stars,
   price,
   color,
-}): props {
+}): Props {
   return (
     <Grid item xs="6" sm="4" md="3">
       <Grow in="to">
@@ -93,16 +93,12 @@ export default function CardPop({
                 <Grid container xs={12} sm={12} md={12}>
                   <CardActions>
                     <FormControl>
-                      {/* {option.keys(option).map((key) => {
-
-                                                        return( */}
                       <CirclePicker
                         circleSize={20}
                         height="12px"
                         colors={["#D9E3F0", "#F47373", "#697689"]}
                       />
-                      {/* )})};  */}
-                    </FormControl>
+                      </FormControl>
                   </CardActions>
                 </Grid>
 

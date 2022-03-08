@@ -1,4 +1,4 @@
-import { Button, Grid, Input, Paper, Typography } from "@mui/material";
+import { Button, Grid, Input, Typography } from "@mui/material";
 import * as React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
